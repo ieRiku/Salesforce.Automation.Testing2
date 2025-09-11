@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="7" failed="1" skipped="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T11:07:17 IST" name="AmazonTestSuite" finished-at="2025-09-01T11:08:13 IST" duration-ms="56207">
+  <suite started-at="2025-09-11T14:05:41 IST" name="AmazonTestSuite" finished-at="2025-09-11T14:06:28 IST" duration-ms="47056">
     <groups>
       <group name="search">
         <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" name="testSearchProduct" class="tests.SearchTest"/>
@@ -24,9 +24,9 @@
         <method signature="CartTest.placeOrder()[pri:5, instance:tests.CartTest@24aed80c]" name="placeOrder" class="tests.CartTest"/>
       </group> <!-- cart -->
     </groups>
-    <test started-at="2025-09-01T11:07:17 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-01T11:08:13 IST" duration-ms="56207">
+    <test started-at="2025-09-11T14:05:41 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-11T14:06:28 IST" duration-ms="47056">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-01T11:07:17 IST" name="setDriver" finished-at="2025-09-01T11:07:21 IST" duration-ms="3916" status="PASS">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-11T14:05:41 IST" name="setDriver" finished-at="2025-09-11T14:05:46 IST" duration-ms="5548" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,21 +37,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="invalidLoginTest()[pri:1, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-01T11:07:21 IST" name="invalidLoginTest" finished-at="2025-09-01T11:07:25 IST" duration-ms="4110" status="PASS">
+        <test-method signature="invalidLoginTest()[pri:1, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-11T14:05:46 IST" name="invalidLoginTest" finished-at="2025-09-11T14:05:53 IST" duration-ms="6339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-01T11:07:25 IST" name="verifyLoginTest" finished-at="2025-09-01T11:07:28 IST" duration-ms="3056" status="PASS">
+        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-11T14:05:53 IST" name="verifyLoginTest" finished-at="2025-09-11T14:05:57 IST" duration-ms="3996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginTest -->
-        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-01T11:07:28 IST" name="validLoginTest" finished-at="2025-09-01T11:07:31 IST" duration-ms="2910" status="PASS">
+        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-11T14:05:57 IST" name="validLoginTest" finished-at="2025-09-11T14:05:59 IST" duration-ms="2383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.CartTest">
-        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:07:57 IST" name="setDriver" finished-at="2025-09-01T11:07:57 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="setDriver" finished-at="2025-09-11T14:06:27 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,33 +62,143 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="cartAddTest()[pri:1, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:07:57 IST" name="cartAddTest" depends-on-groups="search" finished-at="2025-09-01T11:08:01 IST" duration-ms="4539" status="PASS">
+        <test-method signature="cartAddTest()[pri:1, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="cartAddTest" depends-on-groups="search" finished-at="2025-09-11T14:06:27 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CartTest.cartAddTest()[pri:1, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CartTest.cartAddTest()[pri:1, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cartAddTest -->
-        <test-method signature="modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:08:01 IST" name="modifyQuantity" depends-on-groups="search" finished-at="2025-09-01T11:08:06 IST" duration-ms="4919" status="PASS">
+        <test-method signature="modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="modifyQuantity" depends-on-groups="search" finished-at="2025-09-11T14:06:27 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modifyQuantity -->
-        <test-method signature="deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:08:06 IST" name="deleteFromCart" depends-on-groups="search" finished-at="2025-09-01T11:08:08 IST" duration-ms="1214" status="PASS">
+        <test-method signature="deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="deleteFromCart" depends-on-groups="search" finished-at="2025-09-11T14:06:27 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteFromCart -->
-        <test-method signature="buyProducts()[pri:4, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:08:08 IST" name="buyProducts" depends-on-groups="search" finished-at="2025-09-01T11:08:12 IST" duration-ms="4921" status="PASS">
+        <test-method signature="buyProducts()[pri:4, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="buyProducts" depends-on-groups="search" finished-at="2025-09-11T14:06:27 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CartTest.buyProducts()[pri:4, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CartTest.buyProducts()[pri:4, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buyProducts -->
-        <test-method signature="placeOrder()[pri:5, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:08:12 IST" name="placeOrder" depends-on-groups="search" finished-at="2025-09-01T11:08:12 IST" duration-ms="33" status="PASS">
+        <test-method signature="placeOrder()[pri:5, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="placeOrder" depends-on-groups="search" finished-at="2025-09-11T14:06:27 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CartTest.placeOrder()[pri:5, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CartTest.placeOrder()[pri:5, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group "search"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrder -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.CartTest@24aed80c]" started-at="2025-09-01T11:08:12 IST" name="quitBrowser" finished-at="2025-09-01T11:08:13 IST" duration-ms="326" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.CartTest@24aed80c]" started-at="2025-09-11T14:06:27 IST" name="quitBrowser" finished-at="2025-09-11T14:06:28 IST" duration-ms="314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- tests.CartTest -->
       <class name="tests.SearchTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-01T11:07:31 IST" name="setup" finished-at="2025-09-01T11:07:31 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-11T14:05:59 IST" name="setup" finished-at="2025-09-11T14:05:59 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,23 +209,96 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-01T11:07:31 IST" name="testSearchProduct" depends-on-groups="login" finished-at="2025-09-01T11:07:37 IST" duration-ms="5873" status="PASS">
+        <test-method signature="testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-11T14:05:59 IST" name="testSearchProduct" depends-on-groups="login" finished-at="2025-09-11T14:06:06 IST" duration-ms="6830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchProduct -->
-        <test-method signature="testApplyFilters()[pri:2, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-01T11:07:37 IST" name="testApplyFilters" depends-on-groups="login" finished-at="2025-09-01T11:07:46 IST" duration-ms="9546" status="PASS">
+        <test-method signature="testApplyFilters()[pri:2, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-11T14:06:06 IST" name="testApplyFilters" depends-on-groups="login" finished-at="2025-09-11T14:06:10 IST" duration-ms="4013" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//li[@id='p_72/1318476031']/span/div/a/i"}
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c3a4815727beede8bd0e1de1d2875ccf, findElement {using=xpath, value=//li[@id='p_72/1318476031']/span/div/a/i}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\trex3\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51929/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c3a4815727beede8bd0e1de1d2875ccf]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@id='p_72/1318476031']/span/div/a/i"}
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c3a4815727beede8bd0e1de1d2875ccf, findElement {using=xpath, value=//li[@id='p_72/1318476031']/span/div/a/i}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\trex3\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51929/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c3a4815727beede8bd0e1de1d2875ccf
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.getWrappedElement(Unknown Source)
+at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:473)
+at pages.SearchPage.applyCustomerRatings(SearchPage.java:117)
+at tests.SearchTest.testApplyFilters(SearchTest.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApplyFilters -->
-        <test-method signature="testSortLowToHigh()[pri:3, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-01T11:07:46 IST" name="testSortLowToHigh" depends-on-groups="login" finished-at="2025-09-01T11:07:48 IST" duration-ms="1928" status="PASS">
+        <test-method signature="testSortLowToHigh()[pri:3, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-11T14:06:10 IST" name="testSortLowToHigh" depends-on-groups="login" finished-at="2025-09-11T14:06:12 IST" duration-ms="2495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSortLowToHigh -->
-        <test-method signature="testBlankSearch()[pri:4, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-01T11:07:48 IST" name="testBlankSearch" depends-on-groups="login" finished-at="2025-09-01T11:07:50 IST" duration-ms="2288" status="PASS">
+        <test-method signature="testBlankSearch()[pri:4, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-11T14:06:12 IST" name="testBlankSearch" depends-on-groups="login" finished-at="2025-09-11T14:06:16 IST" duration-ms="3852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankSearch -->
-        <test-method signature="testViewProductDetails()[pri:5, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-01T11:07:50 IST" name="testViewProductDetails" depends-on-groups="login" finished-at="2025-09-01T11:07:57 IST" duration-ms="6530" status="PASS">
+        <test-method signature="testViewProductDetails()[pri:5, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-11T14:06:16 IST" name="testViewProductDetails" depends-on-groups="login" finished-at="2025-09-11T14:06:27 IST" duration-ms="11122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testViewProductDetails -->

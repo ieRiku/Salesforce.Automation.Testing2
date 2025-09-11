@@ -9,7 +9,7 @@
     <classes>
       <class name="tests.SearchTest">
         <methods>
-          <include name="testViewProductDetails"/>
+          <include name="testApplyFilters"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.SearchTest -->

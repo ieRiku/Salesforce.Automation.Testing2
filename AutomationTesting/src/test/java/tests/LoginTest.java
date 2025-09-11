@@ -29,6 +29,7 @@ public class LoginTest extends DriverSetup{
 
 	@Test (groups = "login", priority=1)
 	public static void invalidLoginTest() throws InterruptedException {
+		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
 		lp.enterEmail("invalidemail@gmail.com");
 		lp.clickContinue();
