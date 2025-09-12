@@ -31,10 +31,9 @@ public class SearchTest {
     }
     
     @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 2)
-    public void testApplyFilters() throws InterruptedException {
+    public void testApplyFilters(){
         // Apply brand filter
         searchPage.selectBrand("HP");
-        Thread.sleep(3000);
         // Apply price range
         searchPage.applyPriceRange();
         
@@ -59,12 +58,13 @@ public class SearchTest {
     }
 
     @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 5)
-    public void testViewProductDetails() {
+    public void testViewProductDetails() throws InterruptedException {
        searchPage.searchProduct("laptop");
        searchPage.clickFirstProduct();
        
        DriverSetup.switchTab();
-
+       
+       //Thread.sleep(1000000);
        String title = searchPage.getSelectedProductTitle();
        String price = searchPage.getSelectedProductPrice();
 

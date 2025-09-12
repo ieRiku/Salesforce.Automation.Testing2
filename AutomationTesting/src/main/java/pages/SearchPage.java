@@ -32,14 +32,25 @@ public class SearchPage {
     @FindBy(id = "nav-search-submit-text")
     private WebElement searchBtn;
 
-    @FindBy(xpath = "/html/body/div[1]/div[1]/span/div/h1/div/div[4]/div/div/form/span/span/span/span")
-    private WebElement sortDropdown;
     
+    //Implemented dynamic xpath
+//    @FindBy(xpath = "/html/body/div[1]/div[1]/span/div/h1/div/div[4]/div/div/form/span/span/span/span")
+//    private WebElement sortDropdown;
+    
+    @FindBy(xpath = "//*[starts-with(@id, 'a-autoid-') and contains(@id, '-announce')]/span[2]")
+    private WebElement sortDropdown;
+
     //Low to high option
-    @FindBy(xpath = "/html/body/div[4]/div/div/ul/li[2]/a")
+//    @FindBy(xpath = "/html/body/div[4]/div/div/ul/li[2]/a")
+//    private WebElement lowToHighOption;
+    
+    @FindBy(xpath = "//*[@id=\"s-result-sort-select_1\"]")
     private WebElement lowToHighOption;
     
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div/div[2]/div/div/div[1]/a/h2")
+//    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div/div[2]/div/div/div[1]/a/h2")
+//    private WebElement firstProduct;
+    
+    @FindBy(xpath = "//*[contains(text(),'Results')]/following::div[@role='listitem'][1]//h2//span")
     private WebElement firstProduct;
     
     @FindBy(xpath = "//*[@id=\"titleSection\"]//*[@id=\"productTitle\"]")
@@ -54,7 +65,10 @@ public class SearchPage {
     @FindBy(xpath = "\"//div[@data-component-type='s-search-result']\"")
     private WebElement allElementsLocated;
     
-    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-3']/span/a/span")
+//    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-2']/span/a/span")
+//    private WebElement rangeElement;
+    
+    @FindBy(xpath = "//div[@id='priceRefinements']/ul[1]/span/span[2]/li/span/a")
     private WebElement rangeElement;
 
     @FindBy(xpath = "//li[@id='p_72/1318476031']/span/div/a/i")

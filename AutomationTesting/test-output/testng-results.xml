@@ -1,27 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-12T17:55:20 IST" name="Smoke Suite" finished-at="2025-09-12T17:55:46 IST" duration-ms="26826">
+  <suite started-at="2025-09-13T00:23:28 IST" name="AmazonTestSuite" finished-at="2025-09-13T00:24:39 IST" duration-ms="70198">
     <groups>
+      <group name="search">
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" name="testSearchProduct" class="tests.SearchTest"/>
+        <method signature="SearchTest.testApplyFilters()[pri:2, instance:tests.SearchTest@2aceadd4]" name="testApplyFilters" class="tests.SearchTest"/>
+        <method signature="SearchTest.testSortLowToHigh()[pri:3, instance:tests.SearchTest@2aceadd4]" name="testSortLowToHigh" class="tests.SearchTest"/>
+        <method signature="SearchTest.testBlankSearch()[pri:4, instance:tests.SearchTest@2aceadd4]" name="testBlankSearch" class="tests.SearchTest"/>
+        <method signature="SearchTest.testViewProductDetails()[pri:5, instance:tests.SearchTest@2aceadd4]" name="testViewProductDetails" class="tests.SearchTest"/>
+      </group> <!-- search -->
       <group name="regression">
-        <method signature="LoginTest.invalidLoginTest()[pri:1, instance:tests.LoginTest@3bf7ca37]" name="invalidLoginTest" class="tests.LoginTest"/>
-        <method signature="LoginTest.verifyLoginTest()[pri:2, instance:tests.LoginTest@3bf7ca37]" name="verifyLoginTest" class="tests.LoginTest"/>
-        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@3bf7ca37]" name="validLoginTest" class="tests.LoginTest"/>
+        <method signature="CartTest.cartAddTest()[pri:1, instance:tests.CartTest@24aed80c]" name="cartAddTest" class="tests.CartTest"/>
+        <method signature="LoginTest.invalidLoginTest()[pri:1, instance:tests.LoginTest@55fe41ea]" name="invalidLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" name="testSearchProduct" class="tests.SearchTest"/>
+        <method signature="CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c]" name="modifyQuantity" class="tests.CartTest"/>
+        <method signature="LoginTest.verifyLoginTest()[pri:2, instance:tests.LoginTest@55fe41ea]" name="verifyLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testApplyFilters()[pri:2, instance:tests.SearchTest@2aceadd4]" name="testApplyFilters" class="tests.SearchTest"/>
+        <method signature="CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c]" name="deleteFromCart" class="tests.CartTest"/>
+        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@55fe41ea]" name="validLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testSortLowToHigh()[pri:3, instance:tests.SearchTest@2aceadd4]" name="testSortLowToHigh" class="tests.SearchTest"/>
+        <method signature="CartTest.buyProducts()[pri:4, instance:tests.CartTest@24aed80c]" name="buyProducts" class="tests.CartTest"/>
+        <method signature="SearchTest.testBlankSearch()[pri:4, instance:tests.SearchTest@2aceadd4]" name="testBlankSearch" class="tests.SearchTest"/>
+        <method signature="CartTest.placeOrder()[pri:5, instance:tests.CartTest@24aed80c]" name="placeOrder" class="tests.CartTest"/>
+        <method signature="SearchTest.testViewProductDetails()[pri:5, instance:tests.SearchTest@2aceadd4]" name="testViewProductDetails" class="tests.SearchTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="LoginTest.invalidLoginTest()[pri:1, instance:tests.LoginTest@3bf7ca37]" name="invalidLoginTest" class="tests.LoginTest"/>
-        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@3bf7ca37]" name="validLoginTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.invalidLoginTest()[pri:1, instance:tests.LoginTest@55fe41ea]" name="invalidLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" name="testSearchProduct" class="tests.SearchTest"/>
+        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@55fe41ea]" name="validLoginTest" class="tests.LoginTest"/>
       </group> <!-- smoke -->
       <group name="login">
-        <method signature="LoginTest.invalidLoginTest()[pri:1, instance:tests.LoginTest@3bf7ca37]" name="invalidLoginTest" class="tests.LoginTest"/>
-        <method signature="LoginTest.verifyLoginTest()[pri:2, instance:tests.LoginTest@3bf7ca37]" name="verifyLoginTest" class="tests.LoginTest"/>
-        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@3bf7ca37]" name="validLoginTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.invalidLoginTest()[pri:1, instance:tests.LoginTest@55fe41ea]" name="invalidLoginTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.verifyLoginTest()[pri:2, instance:tests.LoginTest@55fe41ea]" name="verifyLoginTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@55fe41ea]" name="validLoginTest" class="tests.LoginTest"/>
       </group> <!-- login -->
+      <group name="cart">
+        <method signature="CartTest.cartAddTest()[pri:1, instance:tests.CartTest@24aed80c]" name="cartAddTest" class="tests.CartTest"/>
+        <method signature="CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c]" name="modifyQuantity" class="tests.CartTest"/>
+        <method signature="CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c]" name="deleteFromCart" class="tests.CartTest"/>
+        <method signature="CartTest.buyProducts()[pri:4, instance:tests.CartTest@24aed80c]" name="buyProducts" class="tests.CartTest"/>
+        <method signature="CartTest.placeOrder()[pri:5, instance:tests.CartTest@24aed80c]" name="placeOrder" class="tests.CartTest"/>
+      </group> <!-- cart -->
     </groups>
-    <test started-at="2025-09-12T17:55:20 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-12T17:55:46 IST" duration-ms="26826">
+    <test started-at="2025-09-13T00:23:28 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-13T00:24:39 IST" duration-ms="70198">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@3bf7ca37]" started-at="2025-09-12T17:55:20 IST" name="setDriver" finished-at="2025-09-12T17:55:25 IST" duration-ms="5251" status="PASS">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-13T00:23:29 IST" name="setDriver" finished-at="2025-09-13T00:23:33 IST" duration-ms="4085" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,89 +57,89 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="invalidLoginTest()[pri:1, instance:tests.LoginTest@3bf7ca37]" started-at="2025-09-12T17:55:25 IST" name="invalidLoginTest" finished-at="2025-09-12T17:55:33 IST" duration-ms="8114" status="PASS">
+        <test-method signature="invalidLoginTest()[pri:1, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-13T00:23:33 IST" name="invalidLoginTest" finished-at="2025-09-13T00:23:41 IST" duration-ms="8125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@3bf7ca37]" started-at="2025-09-12T17:55:33 IST" name="verifyLoginTest" finished-at="2025-09-12T17:55:41 IST" duration-ms="7608" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: nav-link-accountList-nav-line-1' (tried for 5 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: nav-link-accountList-nav-line-1' (tried for 5 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pages.LoginPage.loginButtonEnabled(LoginPage.java:90)
-at tests.LoginTest.verifyLoginTest(LoginTest.java:43)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-accountList\-nav\-line\-1"}
-  (Session info: chrome=140.0.7339.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [225444151b06530ed59496a36b802381, findElement {using=id, value=nav-link-accountList-nav-line-1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.127, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\trex3\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55399/devtoo..., se:cdpVersion: 140.0.7339.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 225444151b06530ed59496a36b802381
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-13T00:23:41 IST" name="verifyLoginTest" finished-at="2025-09-13T00:23:45 IST" duration-ms="3784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginTest -->
-        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@3bf7ca37]" started-at="2025-09-12T17:55:41 IST" name="validLoginTest" finished-at="2025-09-12T17:55:46 IST" duration-ms="5772" status="PASS">
+        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@55fe41ea]" started-at="2025-09-13T00:23:45 IST" name="validLoginTest" finished-at="2025-09-13T00:23:49 IST" duration-ms="4044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
       </class> <!-- tests.LoginTest -->
+      <class name="tests.CartTest">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:24 IST" name="setDriver" finished-at="2025-09-13T00:24:24 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="cartAddTest()[pri:1, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:24 IST" name="cartAddTest" depends-on-groups="search" finished-at="2025-09-13T00:24:29 IST" duration-ms="5292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartAddTest -->
+        <test-method signature="modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:29 IST" name="modifyQuantity" depends-on-groups="search" finished-at="2025-09-13T00:24:29 IST" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyQuantity -->
+        <test-method signature="deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:30 IST" name="deleteFromCart" depends-on-groups="search" finished-at="2025-09-13T00:24:30 IST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteFromCart -->
+        <test-method signature="buyProducts()[pri:4, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:30 IST" name="buyProducts" depends-on-groups="search" finished-at="2025-09-13T00:24:37 IST" duration-ms="7470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyProducts -->
+        <test-method signature="placeOrder()[pri:5, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:37 IST" name="placeOrder" depends-on-groups="search" finished-at="2025-09-13T00:24:38 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrder -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.CartTest@24aed80c]" started-at="2025-09-13T00:24:38 IST" name="quitBrowser" finished-at="2025-09-13T00:24:39 IST" duration-ms="1145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- tests.CartTest -->
+      <class name="tests.SearchTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-13T00:23:49 IST" name="setup" finished-at="2025-09-13T00:23:49 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSearchProduct()[pri:1, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-13T00:23:49 IST" name="testSearchProduct" depends-on-groups="login" finished-at="2025-09-13T00:23:56 IST" duration-ms="7691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchProduct -->
+        <test-method signature="testApplyFilters()[pri:2, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-13T00:23:56 IST" name="testApplyFilters" depends-on-groups="login" finished-at="2025-09-13T00:24:06 IST" duration-ms="9965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyFilters -->
+        <test-method signature="testSortLowToHigh()[pri:3, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-13T00:24:06 IST" name="testSortLowToHigh" depends-on-groups="login" finished-at="2025-09-13T00:24:10 IST" duration-ms="3351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortLowToHigh -->
+        <test-method signature="testBlankSearch()[pri:4, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-13T00:24:10 IST" name="testBlankSearch" depends-on-groups="login" finished-at="2025-09-13T00:24:13 IST" duration-ms="3395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBlankSearch -->
+        <test-method signature="testViewProductDetails()[pri:5, instance:tests.SearchTest@2aceadd4]" started-at="2025-09-13T00:24:13 IST" name="testViewProductDetails" depends-on-groups="login" finished-at="2025-09-13T00:24:24 IST" duration-ms="10514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testViewProductDetails -->
+      </class> <!-- tests.SearchTest -->
     </test> <!-- LoginAndSearchTest_Chrome -->
-  </suite> <!-- Smoke Suite -->
+  </suite> <!-- AmazonTestSuite -->
 </testng-results>

@@ -6,19 +6,11 @@
   </listeners>
   <test thread-count="1" parallel="tests" name="LoginAndSearchTest_Chrome(failed)">
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="regression"/>
-      </run>
-    </groups>
     <classes>
       <class name="tests.SearchTest">
         <methods>
-          <include name="testViewProductDetails"/>
-          <include name="testSearchProduct"/>
           <include name="testApplyFilters"/>
-          <include name="testBlankSearch"/>
-          <include name="testSortLowToHigh"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- tests.SearchTest -->
       <class name="tests.CartTest">
@@ -27,16 +19,11 @@
           <include name="placeOrder"/>
           <include name="deleteFromCart"/>
           <include name="cartAddTest"/>
+          <include name="quitBrowser"/>
           <include name="buyProducts"/>
+          <include name="setDriver"/>
         </methods>
       </class> <!-- tests.CartTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="verifyLoginTest"/>
-          <include name="invalidLoginTest"/>
-          <include name="validLoginTest"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- LoginAndSearchTest_Chrome(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

@@ -19,7 +19,7 @@ public class LoginTest extends DriverSetup{
 	}
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=3)
-	public static void validLoginTest() throws InterruptedException {
+	public static void validLoginTest(){
 		lp.clickLoginButton();
 		lp.enterEmail(ConfigLoader.getProperty("username"));
 		lp.clickContinue();
@@ -28,7 +28,7 @@ public class LoginTest extends DriverSetup{
 	}
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
-	public static void invalidLoginTest() throws InterruptedException {
+	public static void invalidLoginTest() {
 		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
 		lp.enterEmail("invalidemail@gmail.com");
@@ -38,7 +38,7 @@ public class LoginTest extends DriverSetup{
 	}
 
 	@Test (groups = {"regression", "login"}, priority=2)
-	public static void verifyLoginTest() throws InterruptedException {
+	public static void verifyLoginTest() {
 		lp.navigateToUrl(ConfigLoader.getProperty("url"));
 		System.out.println(lp.loginButtonEnabled());
 		System.out.println(lp.loginButtonDisplayed());
