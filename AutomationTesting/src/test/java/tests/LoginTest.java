@@ -18,7 +18,7 @@ public class LoginTest extends DriverSetup{
 		lp = new LoginPage(DriverSetup.getDriver(browser));
 	}
 
-	@Test (groups = "login", priority=3)
+	@Test (groups = {"smoke", "regression", "login"}, priority=3)
 	public static void validLoginTest() throws InterruptedException {
 		lp.clickLoginButton();
 		lp.enterEmail(ConfigLoader.getProperty("username"));
@@ -27,7 +27,7 @@ public class LoginTest extends DriverSetup{
 		lp.clickSubmitLogin();
 	}
 
-	@Test (groups = "login", priority=1)
+	@Test (groups = {"smoke", "regression", "login"}, priority=1)
 	public static void invalidLoginTest() throws InterruptedException {
 		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
@@ -37,7 +37,7 @@ public class LoginTest extends DriverSetup{
 		lp.clickSubmitLogin();
 	}
 
-	@Test (groups = "login", priority=2)
+	@Test (groups = {"regression", "login"}, priority=2)
 	public static void verifyLoginTest() throws InterruptedException {
 		lp.navigateToUrl(ConfigLoader.getProperty("url"));
 		System.out.println(lp.loginButtonEnabled());

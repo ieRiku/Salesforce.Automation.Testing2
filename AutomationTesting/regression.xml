@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" parallel="tests" thread-count="1">
+	<listeners>
+		<listener class-name="runners.TestListener"/>
+	</listeners>
+    <test name="LoginAndSearchTest_Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+			<class name="tests.LoginTest"/>
+            <class name="tests.SearchTest"/>
+            <class name="tests.CartTest"/>
+        </classes>
+    </test>
+    <!--<test name="LoginAndSearchTest_Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.SearchTest"/>
+            <class name="tests.CartTest"/>
+        </classes>
+    </test>-->
+</suite>

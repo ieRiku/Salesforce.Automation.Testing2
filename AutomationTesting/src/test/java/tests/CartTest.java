@@ -17,25 +17,25 @@ public class CartTest extends DriverSetup {
 		cp = new CartPage(DriverSetup.getDriver(browser));
 	}
 	
-	@Test (groups = "cart", dependsOnGroups = "search", priority = 1)
+	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 1)
 	public static void cartAddTest() throws InterruptedException {
 		Thread.sleep(500);
 		cp.cartAdd();
 	}
 	
-	@Test (groups = "cart", dependsOnGroups = "search", priority = 2)
+	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 2)
 	public static void modifyQuantity() throws InterruptedException {
 		Thread.sleep(500);
 		cp.quantityModify();
 	}
 	
-	@Test (groups = "cart", dependsOnGroups = "search", priority = 3)
+	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 3)
 	public static void deleteFromCart() throws InterruptedException {
 		Thread.sleep(1000);
 		cp.deleteProductFromCart();
 	}
 	
-	@Test (groups = "cart", dependsOnGroups = "search", priority = 4)
+	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 4)
 	public static void buyProducts() throws InterruptedException {
 		Thread.sleep(2000);
 		cp.proceedToBuyFromCart();
@@ -45,7 +45,7 @@ public class CartTest extends DriverSetup {
 		}
 	}
 	
-	@Test (groups = "cart", dependsOnGroups = "search", priority = 5)
+	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 5)
 	public static void placeOrder() {
 		boolean canMoveToOrder = cp.buyingIsEnabled();
 		if(!canMoveToOrder) {
