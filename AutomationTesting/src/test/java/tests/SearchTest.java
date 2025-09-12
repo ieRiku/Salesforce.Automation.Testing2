@@ -24,17 +24,16 @@ public class SearchTest {
         searchPage = new SearchPage(DriverSetup.getDriver(browser));
     }
 
-    @Test(groups = "search", dependsOnGroups = "login", priority = 1)
+    @Test(groups = {"smoke", "regression", "search"}, dependsOnGroups = "login", priority = 1)
     public void testSearchProduct() {
         searchPage.searchProduct("laptop");
         Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Search results not displayed!");
     }
     
-    @Test(groups = "search", dependsOnGroups = "login", priority = 2)
-    public void testApplyFilters() throws InterruptedException {
+    @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 2)
+    public void testApplyFilters(){
         // Apply brand filter
         searchPage.selectBrand("HP");
-        Thread.sleep(3000);
         // Apply price range
         searchPage.applyPriceRange();
         
@@ -45,26 +44,27 @@ public class SearchTest {
         Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Filtered results not displayed!");
     }
 
-    @Test(groups = "search", dependsOnGroups = "login", priority = 3)
+    @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 3)
     public void testSortLowToHigh() {
         searchPage.sortLowToHigh();
         Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Results not visible after Low-High sort!");
     }
     
     
-    @Test(groups = "search", dependsOnGroups = "login", priority = 4)
+    @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 4)
     public void testBlankSearch() {
         String title = searchPage.searchBlank();
         Assert.assertTrue(title.contains("Amazon"), "Blank search did not stay on amazon");
     }
 
-    @Test(groups = "search", dependsOnGroups = "login", priority = 5)
-    public void testViewProductDetails() {
+    @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 5)
+    public void testViewProductDetails() throws InterruptedException {
        searchPage.searchProduct("laptop");
        searchPage.clickFirstProduct();
        
        DriverSetup.switchTab();
-
+       
+       //Thread.sleep(1000000);
        String title = searchPage.getSelectedProductTitle();
        String price = searchPage.getSelectedProductPrice();
 

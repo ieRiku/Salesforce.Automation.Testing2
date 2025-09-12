@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import base.DriverSetup;
 
 import java.time.Duration;
 
@@ -109,28 +108,21 @@ public class CartPage {
 	}
 	
 	
-	public void cartAdd() throws InterruptedException {
+	public void cartAdd(){
 		clickAddToCart();
 		String title = getProductTitle();
 		String message = getSuccessMessage();
 		clickGoToCart();
 		String cartTitle = getCartProductTitle();
-//		Thread.sleep(2000);
-//		increaseProductCount();
-//		Thread.sleep(2000);
-//		decreaseProductCount();
-//		Thread.sleep(2000);
 
 		System.out.println("Product Title: " + title);
 		System.out.println("Success Message: " + message);
 		System.out.println("Cart Product Title: " + cartTitle);
 	}
 	
-	public void quantityModify() throws InterruptedException {
+	public void quantityModify(){
 		increaseProductCount();
-		Thread.sleep(2000);
 		decreaseProductCount();
-		Thread.sleep(2000);
 	}
 	
 	
@@ -149,8 +141,4 @@ public class CartPage {
 		return orderPlace.isEnabled();
 	}
 	
-	public static void main(String[] args) {
-		CartPage cp = new CartPage(DriverSetup.getDriver("chrome"));
-		;
-	}
 }
