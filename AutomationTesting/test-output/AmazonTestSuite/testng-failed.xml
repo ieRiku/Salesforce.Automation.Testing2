@@ -7,34 +7,14 @@
   <test thread-count="1" parallel="tests" name="LoginAndSearchTest_Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.SearchTest">
-        <methods>
-          <include name="testViewProductDetails"/>
-          <include name="testSearchProduct"/>
-          <include name="testApplyFilters"/>
-          <include name="setup"/>
-          <include name="testBlankSearch"/>
-          <include name="testSortLowToHigh"/>
-        </methods>
-      </class> <!-- tests.SearchTest -->
       <class name="tests.CartTest">
         <methods>
-          <include name="modifyQuantity"/>
           <include name="placeOrder"/>
-          <include name="deleteFromCart"/>
-          <include name="cartAddTest"/>
           <include name="quitBrowser"/>
           <include name="buyProducts"/>
           <include name="setDriver"/>
         </methods>
       </class> <!-- tests.CartTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="invalidLoginTest"/>
-          <include name="setDriver"/>
-          <include name="validLoginTest"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- LoginAndSearchTest_Chrome(failed) -->
 </suite> <!-- Failed suite [AmazonTestSuite] -->
