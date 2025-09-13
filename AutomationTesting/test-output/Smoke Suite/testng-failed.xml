@@ -7,12 +7,13 @@
   <test thread-count="5" name="LoginAndSearchTest_Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.SmokeTest">
         <methods>
-          <include name="verifyLoginTest"/>
           <include name="setDriver"/>
+          <include name="invalidLoginTest"/>
+          <include name="quitBrowser"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.SmokeTest -->
     </classes>
   </test> <!-- LoginAndSearchTest_Chrome(failed) -->
 </suite> <!-- Failed suite [Smoke Suite] -->

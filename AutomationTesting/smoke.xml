@@ -7,7 +7,7 @@
     <test name="LoginAndSearchTest_Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-			<class name="tests.LoginTest"/>
+			<class name="tests.SmokeTest"/>
         </classes>
     </test>
 </suite>

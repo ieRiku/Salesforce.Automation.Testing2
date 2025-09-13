@@ -8,20 +8,26 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">AmazonTestSuite</th></tr>
-<tr><td><a href="#t0">LoginAndSearchTest_Chrome</a></td><td class="num">7</td><td class="num attn">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">47,838</td><td></td><td></td></tr>
+<tr><th colspan="8">Smoke Suite</th></tr>
+<tr><td><a href="#t0">LoginAndSearchTest_Chrome</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">22,518</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AmazonTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginAndSearchTest_Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.SearchTest</td><td><a href="#m0">testApplyFilters</a></td><td rowspan="1">1757760108121</td><td rowspan="1">303</td></tr><tr><th colspan="4">LoginAndSearchTest_Chrome &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="5">tests.CartTest</td><td><a href="#m1">buyProducts</a></td><td rowspan="1">1757760119428</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">cartAddTest</a></td><td rowspan="1">1757760119422</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">deleteFromCart</a></td><td rowspan="1">1757760119427</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">modifyQuantity</a></td><td rowspan="1">1757760119425</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">placeOrder</a></td><td rowspan="1">1757760119430</td><td rowspan="1">0</td></tr><tr><th colspan="4">LoginAndSearchTest_Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">tests.LoginTest</td><td><a href="#m6">invalidLoginTest</a></td><td rowspan="1">1757760089565</td><td rowspan="1">7455</td></tr><tr class="passedeven"><td><a href="#m7">validLoginTest</a></td><td rowspan="1">1757760098530</td><td rowspan="1">6361</td></tr><tr class="passedeven"><td><a href="#m8">verifyLoginTest</a></td><td rowspan="1">1757760097028</td><td rowspan="1">1500</td></tr><tr class="passedodd"><td rowspan="4">tests.SearchTest</td><td><a href="#m9">testBlankSearch</a></td><td rowspan="1">1757760109683</td><td rowspan="1">2222</td></tr><tr class="passedodd"><td><a href="#m10">testSearchProduct</a></td><td rowspan="1">1757760104897</td><td rowspan="1">3222</td></tr><tr class="passedodd"><td><a href="#m11">testSortLowToHigh</a></td><td rowspan="1">1757760108433</td><td rowspan="1">1248</td></tr><tr class="passedodd"><td><a href="#m12">testViewProductDetails</a></td><td rowspan="1">1757760111906</td><td rowspan="1">7510</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginAndSearchTest_Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.SmokeTest</td><td><a href="#m0">invalidLoginTest</a></td><td rowspan="1">1757761474975</td><td rowspan="1">11029</td></tr><tr><th colspan="4">LoginAndSearchTest_Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.SmokeTest</td><td><a href="#m1">validLoginTest</a></td><td rowspan="1">1757761487419</td><td rowspan="1">5501</td></tr><tr class="passedeven"><td><a href="#m2">verifyLoginTest</a></td><td rowspan="1">1757761486019</td><td rowspan="1">1397</td></tr></tbody>
 </table>
-<h2>LoginAndSearchTest_Chrome</h2><h3 id="m0">tests.SearchTest#testApplyFilters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;priceRefinements&apos;]//a[span[starts-with(text(),&apos;₹&apos;) and contains(text(),&apos;-&apos;)]]&quot;}
+<h2>LoginAndSearchTest_Chrome</h2><h3 id="m0">tests.SmokeTest#invalidLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@id=&quot;nav-link-accountList-nav-line-1&quot;]&apos; (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.LoginPage.returnUserName(LoginPage.java:101)
+	at tests.SmokeTest.invalidLoginTest(SmokeTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;nav-link-accountList-nav-line-1&quot;]&quot;}
   (Session info: chrome=139.0.7258.157)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5ada7b56536f5b262ee48a0c176694b0, findElement {value=//div[@id=&apos;priceRefinements&apos;]//a[span[starts-with(text(),&apos;₹&apos;) and contains(text(),&apos;-&apos;)]], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\atomi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55126}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55126/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ada7b56536f5b262ee48a0c176694b0
+Command: [0f943f05088fe7e1f110db1429b16029, findElement {value=//*[@id=&quot;nav-link-accountList-nav-line-1&quot;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\atomi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59439}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59439/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f943f05088fe7e1f110db1429b16029
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -35,65 +41,14 @@ Session ID: 5ada7b56536f5b262ee48a0c176694b0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:473)
-	at pages.SearchPage.applyPriceRange(SearchPage.java:125)
-	at tests.SearchTest.testApplyFilters(SearchTest.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.CartTest#buyProducts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CartTest.buyProducts()[pri:4, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group &quot;search&quot;
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.CartTest#cartAddTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CartTest.cartAddTest()[pri:1, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group &quot;search&quot;
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.CartTest#deleteFromCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group &quot;search&quot;
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.CartTest#modifyQuantity</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group &quot;search&quot;
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.CartTest#placeOrder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CartTest.placeOrder()[pri:5, instance:tests.CartTest@24aed80c] depends on not successfully finished methods in group &quot;search&quot;
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.LoginTest#invalidLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.LoginTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">tests.LoginTest#verifyLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">tests.SearchTest#testBlankSearch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">tests.SearchTest#testSearchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">tests.SearchTest#testSortLowToHigh</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">tests.SearchTest#testViewProductDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 28 more
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.SmokeTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.SmokeTest#verifyLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
