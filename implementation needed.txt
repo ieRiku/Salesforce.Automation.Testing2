@@ -8,3 +8,5 @@
 
 5. Implement a new class called SmokeRunner.java which runs the smoke cases and also should have a driver.quit() method so that browser closes. (done)
 6. Implement assertion if possible at least in login module. (done)
+
+7. Remove depends on and implement priority from login to search to cart.
