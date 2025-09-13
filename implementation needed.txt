@@ -1,0 +1,6 @@
+1. Use try - catch block in test cases for error handling
+2. Use Iretry analyser for failed test cases such as (filterApply)
+3. Fill the execelUtils code even though its not used
+4. Implement headless mode (especially for the ci/cd pipeline)
+5. Implement a new class called SmokeRunner.java which runs the smoke cases and also should have a driver.quit() method so that browser closes.
+6. Implement assertion if possible at least in login module.
