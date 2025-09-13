@@ -47,6 +47,9 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"auth-error-message-box\"]/div/h4")
     private WebElement errorBox;
     
+    @FindBy(xpath = "//*[@id=\"nav-link-accountList-nav-line-1\"]")
+    private WebElement userNameText;
+    
     //..............................................//
     public void clickSubmitButton() {
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
@@ -88,5 +91,14 @@ public class LoginPage {
     
     public boolean loginButtonEnabled() {
     	return wait.until(ExpectedConditions.visibilityOf(loginButton)).isEnabled();
+    }
+    
+    public String returnPageUrl() {
+    	return driver.getCurrentUrl();
+    }
+    
+    public String returnUserName() {
+    	WebElement e1 = wait.until(ExpectedConditions.visibilityOf(userNameText));
+    	return e1.getText();
     }
 }

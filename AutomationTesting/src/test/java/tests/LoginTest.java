@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -25,16 +26,27 @@ public class LoginTest extends DriverSetup{
 		lp.clickContinue();
 		lp.enterPassword(ConfigLoader.getProperty("password"));
 		lp.clickSubmitLogin();
+		
+		String actualName = lp.returnUserName();
+	    String expectedName = "Alex";
+	    
+	    Assert.assertTrue(actualName.contains(expectedName), "Unexpected Name");
 	}
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
 	public static void invalidLoginTest() {
-		lp.clickSubmitButton();	// modified
+		//lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
 		lp.enterEmail("invalidemail@gmail.com");
 		lp.clickContinue();
 		lp.enterPassword("pass1234");
 		lp.clickSubmitLogin();
+		lp.navigateToUrl(ConfigLoader.getProperty("url"));
+		
+		String actualName = lp.returnUserName();
+	    String expectedName = "Alex";
+	    
+	    Assert.assertFalse(actualName.contains(expectedName), "Unexpected Name");
 	}
 
 	@Test (groups = {"regression", "login"}, priority=2)
@@ -42,5 +54,10 @@ public class LoginTest extends DriverSetup{
 		lp.navigateToUrl(ConfigLoader.getProperty("url"));
 		System.out.println(lp.loginButtonEnabled());
 		System.out.println(lp.loginButtonDisplayed());
+		
+		String actualUrl = lp.returnPageUrl();
+	    String expectedUrlPart = "https://www.amazon.in";
+	    
+		Assert.assertTrue(actualUrl.contains(expectedUrlPart), "Unexpected URL ");
 	}
 }
