@@ -35,13 +35,13 @@ public class LoginTest extends DriverSetup{
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
 	public static void invalidLoginTest() {
-		//lp.clickSubmitButton();	// modified
+		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
-		lp.enterEmail("invalidemail@gmail.com");
+		lp.enterEmail("someone@gmail.com");
 		lp.clickContinue();
 		lp.enterPassword("pass1234");
 		lp.clickSubmitLogin();
-		lp.navigateToUrl(ConfigLoader.getProperty("url"));
+		lp.navigateGetUrl(ConfigLoader.getProperty("url"));
 		
 		String actualName = lp.returnUserName();
 	    String expectedName = "Alex";

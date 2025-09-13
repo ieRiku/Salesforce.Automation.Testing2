@@ -85,6 +85,11 @@ public class LoginPage {
     	driver.navigate().to(url);
     }
     
+    public void navigateGetUrl(String url) {
+    	driver.navigate().back();
+    	driver.get(url);   
+    }
+    
     public boolean loginButtonDisplayed() {
     	return wait.until(ExpectedConditions.visibilityOf(loginButton)).isDisplayed();
     }
