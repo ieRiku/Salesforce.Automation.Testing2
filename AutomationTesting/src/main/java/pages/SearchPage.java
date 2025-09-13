@@ -68,8 +68,9 @@ public class SearchPage {
 //    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-2']/span/a/span")
 //    private WebElement rangeElement;
     
-    @FindBy(xpath = "//div[@id='priceRefinements']/ul[1]/span/span[2]/li/span/a")
+    @FindBy(xpath = "//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]")
     private WebElement rangeElement;
+
 
     @FindBy(xpath = "//li[@id='p_72/1318476031']/span/div/a/i")
     private WebElement ratingButton;

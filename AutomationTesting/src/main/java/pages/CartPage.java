@@ -52,7 +52,10 @@ public class CartPage {
 	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-remove'])[1]")
 	private WebElement decreaseProductCount;
 	
-	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-trash'])[1]")
+//	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-trash'])[1]")
+//	private WebElement deleteFromCart;
+	
+	@FindBy(xpath = "(//div[@class='a-row sc-list-item sc-java-remote-feature'])[1]/div[4]/div/div[3]/div[1]/span[2]/span")
 	private WebElement deleteFromCart;
 
 	@FindBy(xpath = "//input[@name='proceedToRetailCheckout']")

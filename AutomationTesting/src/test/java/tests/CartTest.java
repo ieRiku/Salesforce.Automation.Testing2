@@ -29,7 +29,7 @@ public class CartTest extends DriverSetup {
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 3)
 	public static void deleteFromCart() {
-		cp.deleteProductFromCart();
+		cp.deleteProductFromCart();;
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 4)
