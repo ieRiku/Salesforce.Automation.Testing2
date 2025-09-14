@@ -94,6 +94,7 @@ public class CartPage {
 
 	public void clickGoToCart(String browser) {
 		if(browser.equalsIgnoreCase("firefox")) {
+			driver.navigate().refresh();
 			wait.until(ExpectedConditions.elementToBeClickable(goToCartButton));
 			actions.moveToElement(goToCartButton).click().perform();
 		}
