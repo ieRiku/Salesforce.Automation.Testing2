@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-14T12:16:45 IST" name="AmazonTestSuite" finished-at="2025-09-14T12:17:55 IST" duration-ms="70217">
+  <suite started-at="2025-09-14T13:18:08 IST" name="AmazonTestSuite" finished-at="2025-09-14T13:19:15 IST" duration-ms="66836">
     <groups>
       <group name="search">
         <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" name="testSearchProduct" class="tests.SearchTest"/>
@@ -44,9 +44,9 @@
         <method signature="CartTest.placeOrder()[pri:5, instance:tests.CartTest@7817fd62]" name="placeOrder" class="tests.CartTest"/>
       </group> <!-- cart -->
     </groups>
-    <test started-at="2025-09-14T12:16:45 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-14T12:17:55 IST" duration-ms="70217">
+    <test started-at="2025-09-14T13:18:08 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-14T13:19:15 IST" duration-ms="66836">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:16:45 IST" name="setDriver" finished-at="2025-09-14T12:16:50 IST" duration-ms="4729" status="PASS">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T13:18:08 IST" name="setDriver" finished-at="2025-09-14T13:18:13 IST" duration-ms="5578" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,7 +57,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="invalidLoginTest(java.lang.String)[pri:1, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:16:50 IST" name="invalidLoginTest" finished-at="2025-09-14T12:17:02 IST" duration-ms="11694" status="PASS">
+        <test-method signature="invalidLoginTest(java.lang.String)[pri:1, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T13:18:13 IST" name="invalidLoginTest" finished-at="2025-09-14T13:18:24 IST" duration-ms="10294" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -68,17 +68,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:17:02 IST" name="verifyLoginTest" finished-at="2025-09-14T12:17:05 IST" duration-ms="3096" status="PASS">
+        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T13:18:24 IST" name="verifyLoginTest" finished-at="2025-09-14T13:18:26 IST" duration-ms="1880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginTest -->
-        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:17:05 IST" name="validLoginTest" finished-at="2025-09-14T12:17:11 IST" duration-ms="6300" status="PASS">
+        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T13:18:26 IST" name="validLoginTest" finished-at="2025-09-14T13:18:32 IST" duration-ms="6725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.CartTest">
-        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:41 IST" name="setDriver" finished-at="2025-09-14T12:17:41 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:18:59 IST" name="setDriver" finished-at="2025-09-14T13:18:59 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,7 +89,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="cartAddTest(java.lang.String)[pri:1, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:41 IST" name="cartAddTest" depends-on-groups="search" finished-at="2025-09-14T12:17:47 IST" duration-ms="5878" status="PASS">
+        <test-method signature="cartAddTest(java.lang.String)[pri:1, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:18:59 IST" name="cartAddTest" depends-on-groups="search" finished-at="2025-09-14T13:19:04 IST" duration-ms="5073" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -100,29 +100,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cartAddTest -->
-        <test-method signature="modifyQuantity()[pri:2, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:47 IST" name="modifyQuantity" depends-on-groups="search" finished-at="2025-09-14T12:17:48 IST" duration-ms="668" status="PASS">
+        <test-method signature="modifyQuantity()[pri:2, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:19:04 IST" name="modifyQuantity" depends-on-groups="search" finished-at="2025-09-14T13:19:05 IST" duration-ms="671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modifyQuantity -->
-        <test-method signature="deleteFromCart()[pri:3, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:48 IST" name="deleteFromCart" depends-on-groups="search" finished-at="2025-09-14T12:17:48 IST" duration-ms="363" status="PASS">
+        <test-method signature="deleteFromCart()[pri:3, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:19:05 IST" name="deleteFromCart" depends-on-groups="search" finished-at="2025-09-14T13:19:05 IST" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteFromCart -->
-        <test-method signature="buyProducts()[pri:4, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:48 IST" name="buyProducts" depends-on-groups="search" finished-at="2025-09-14T12:17:54 IST" duration-ms="6039" status="PASS">
+        <test-method signature="buyProducts()[pri:4, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:19:05 IST" name="buyProducts" depends-on-groups="search" finished-at="2025-09-14T13:19:14 IST" duration-ms="8497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buyProducts -->
-        <test-method signature="placeOrder()[pri:5, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:54 IST" name="placeOrder" depends-on-groups="search" finished-at="2025-09-14T12:17:54 IST" duration-ms="80" status="PASS">
+        <test-method signature="placeOrder()[pri:5, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:19:14 IST" name="placeOrder" depends-on-groups="search" finished-at="2025-09-14T13:19:14 IST" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrder -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:54 IST" name="quitBrowser" finished-at="2025-09-14T12:17:55 IST" duration-ms="900" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T13:19:14 IST" name="quitBrowser" finished-at="2025-09-14T13:19:15 IST" duration-ms="918" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- tests.CartTest -->
       <class name="tests.SearchTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:11 IST" name="setup" finished-at="2025-09-14T12:17:11 IST" duration-ms="47" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T13:18:32 IST" name="setup" finished-at="2025-09-14T13:18:32 IST" duration-ms="32" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -133,23 +133,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:11 IST" name="testSearchProduct" depends-on-groups="login" finished-at="2025-09-14T12:17:16 IST" duration-ms="5030" status="PASS">
+        <test-method signature="testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T13:18:32 IST" name="testSearchProduct" depends-on-groups="login" finished-at="2025-09-14T13:18:37 IST" duration-ms="4280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchProduct -->
-        <test-method signature="testApplyFilters()[pri:2, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:16 IST" name="testApplyFilters" depends-on-groups="login" finished-at="2025-09-14T12:17:25 IST" duration-ms="9309" status="PASS">
+        <test-method signature="testApplyFilters()[pri:2, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T13:18:37 IST" name="testApplyFilters" depends-on-groups="login" finished-at="2025-09-14T13:18:45 IST" duration-ms="8125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApplyFilters -->
-        <test-method signature="testSortLowToHigh()[pri:3, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:25 IST" name="testSortLowToHigh" depends-on-groups="login" finished-at="2025-09-14T12:17:28 IST" duration-ms="2776" status="PASS">
+        <test-method signature="testSortLowToHigh()[pri:3, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T13:18:45 IST" name="testSortLowToHigh" depends-on-groups="login" finished-at="2025-09-14T13:18:47 IST" duration-ms="1900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSortLowToHigh -->
-        <test-method signature="testBlankSearch()[pri:4, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:28 IST" name="testBlankSearch" depends-on-groups="login" finished-at="2025-09-14T12:17:32 IST" duration-ms="3675" status="PASS">
+        <test-method signature="testBlankSearch()[pri:4, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T13:18:47 IST" name="testBlankSearch" depends-on-groups="login" finished-at="2025-09-14T13:18:50 IST" duration-ms="2943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankSearch -->
-        <test-method signature="testViewProductDetails()[pri:5, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:32 IST" name="testViewProductDetails" depends-on-groups="login" finished-at="2025-09-14T12:17:41 IST" duration-ms="9453" status="PASS">
+        <test-method signature="testViewProductDetails()[pri:5, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T13:18:50 IST" name="testViewProductDetails" depends-on-groups="login" finished-at="2025-09-14T13:18:59 IST" duration-ms="9194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testViewProductDetails -->

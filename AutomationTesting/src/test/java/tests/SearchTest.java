@@ -37,7 +37,9 @@ public class SearchTest {
         // Apply brand filter
         searchPage.selectBrand("HP");
         // Apply price range
+        System.out.println("chk1");
         searchPage.applyPriceRange();
+        System.out.println("chk2");
         
         // Apply customer ratings.
         searchPage.applyCustomerRatings();

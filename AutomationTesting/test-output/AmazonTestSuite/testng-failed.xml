@@ -5,16 +5,25 @@
     <listener class-name="runners.TestListener"/>
   </listeners>
   <test thread-count="2" parallel="tests" name="LoginAndSearchTest_Chrome(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="tests.CartTest">
         <methods>
+          <include name="modifyQuantity"/>
           <include name="placeOrder"/>
+          <include name="deleteFromCart"/>
+          <include name="cartAddTest"/>
           <include name="quitBrowser"/>
           <include name="buyProducts"/>
           <include name="setDriver"/>
         </methods>
       </class> <!-- tests.CartTest -->
+      <class name="tests.SearchTest">
+        <methods>
+          <include name="testApplyFilters"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.SearchTest -->
     </classes>
   </test> <!-- LoginAndSearchTest_Chrome(failed) -->
 </suite> <!-- Failed suite [AmazonTestSuite] -->

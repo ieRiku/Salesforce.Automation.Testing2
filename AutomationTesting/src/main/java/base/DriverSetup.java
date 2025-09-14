@@ -2,7 +2,6 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;    // Add Edge driver
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverSetup {
@@ -14,8 +13,6 @@ public class DriverSetup {
                 driver.set(new ChromeDriver());
             } else if (browser.equalsIgnoreCase("firefox")) {
                 driver.set(new FirefoxDriver());
-            } else if (browser.equalsIgnoreCase("edge")) {
-                driver.set(new EdgeDriver());
             }
             driver.get().manage().window().maximize();
             driver.get().get(ConfigLoader.getProperty("url"));
