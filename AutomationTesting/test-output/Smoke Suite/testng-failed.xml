@@ -7,13 +7,15 @@
   <test thread-count="5" name="LoginAndSearchTest_Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.SmokeTest">
+      <class name="tests.SearchTest">
         <methods>
-          <include name="setDriver"/>
-          <include name="invalidLoginTest"/>
-          <include name="quitBrowser"/>
+          <include name="testViewProductDetails"/>
+          <include name="testApplyFilters"/>
+          <include name="setup"/>
+          <include name="testBlankSearch"/>
+          <include name="testSortLowToHigh"/>
         </methods>
-      </class> <!-- tests.SmokeTest -->
+      </class> <!-- tests.SearchTest -->
     </classes>
   </test> <!-- LoginAndSearchTest_Chrome(failed) -->
 </suite> <!-- Failed suite [Smoke Suite] -->

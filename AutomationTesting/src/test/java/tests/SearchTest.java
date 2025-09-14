@@ -1,5 +1,6 @@
 package tests;
 
+import base.ConfigLoader;
 import base.DriverSetup;
 
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,7 @@ public class SearchTest {
     @Parameters("browser")
     @BeforeClass
     public void setup(String browser) {
+    	ConfigLoader.loadConfig();			// added for testing remove later.	
         driver = DriverSetup.getDriver(browser);
         searchPage = new SearchPage(driver);
     }
@@ -28,19 +30,19 @@ public class SearchTest {
 
     @Test(groups = {"smoke", "regression", "search"}, priority = 4)
     public void testSearchProduct() {
-        searchPage.searchProduct("laptop");
+    	searchPage.searchProduct("laptop");
         Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Search results not displayed!");
     }
     
     @Test(groups = {"regression", "search"}, priority = 5)
-    public void testApplyFilters(){
+    public void testApplyFilters() {
         // Apply brand filter
-        searchPage.selectBrand("HP");
+		searchPage.selectBrand("HP");
+
         // Apply price range
+        //Thread.sleep(2000);
         System.out.println("chk1");
         searchPage.applyPriceRange();
-        
-        //Thread.sleep(100000);
         
         // Apply customer ratings.
         searchPage.applyCustomerRatings();
@@ -63,13 +65,12 @@ public class SearchTest {
     }
 
     @Test(groups = {"regression", "search"}, priority = 8)
-    public void testViewProductDetails() throws InterruptedException {
+    public void testViewProductDetails(){
        searchPage.searchProduct("laptop");
        searchPage.clickFirstProduct();
        
        DriverSetup.switchTab();
        
-       //Thread.sleep(1000000);
        String title = searchPage.getSelectedProductTitle();
        String price = searchPage.getSelectedProductPrice();
 
