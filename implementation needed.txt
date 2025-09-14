@@ -1,6 +1,6 @@
 1. Use try - catch block in test cases for error handling (only in certain places as if applied to tests all tests pass without the hard assertions)(done-partially)
 
-2. Use Iretry analyser for failed test cases such as (filterApply)
+2. Use Iretry analyser for failed test cases such as (filterApply) (done in another way)
 
 3. Fill the execelUtils code even though its not used (done)
 
@@ -10,3 +10,5 @@
 6. Implement assertion if possible at least in login module. (done)
 
 7. Remove depends on and implement priority from login to search to cart. (not needed anymore)
+
+8. Cross browser.

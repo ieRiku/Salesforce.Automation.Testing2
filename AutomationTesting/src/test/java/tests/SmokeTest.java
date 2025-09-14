@@ -36,7 +36,7 @@ public class SmokeTest extends DriverSetup{
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
 	public static void invalidLoginTest() {
-		//lp.clickSubmitButton();	// modified
+		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
 		lp.enterEmail("invalidemail@gmail.com");
 		lp.clickContinue();
