@@ -152,6 +152,7 @@ public class CartPage {
 //	}
 	
 	public void proceedToBuyFromCart() {
+		driver.navigate().refresh();
 	    wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
 	    Actions actions = new Actions(driver);
 	    actions.moveToElement(proceedToBuy).click().perform();

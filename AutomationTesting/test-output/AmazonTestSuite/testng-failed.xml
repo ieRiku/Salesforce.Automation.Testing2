@@ -4,19 +4,17 @@
   <listeners>
     <listener class-name="runners.TestListener"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="LoginAndSearchTest_Firefox(failed)">
+  <test thread-count="2" parallel="tests" name="LoginAndSearchTest_Chrome(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="tests.CartTest">
         <methods>
           <include name="placeOrder"/>
-          <include name="deleteFromCart"/>
-          <include name="cartAddTest" invocation-numbers="0"/>
           <include name="quitBrowser"/>
           <include name="buyProducts"/>
           <include name="setDriver"/>
         </methods>
       </class> <!-- tests.CartTest -->
     </classes>
-  </test> <!-- LoginAndSearchTest_Firefox(failed) -->
+  </test> <!-- LoginAndSearchTest_Chrome(failed) -->
 </suite> <!-- Failed suite [AmazonTestSuite] -->

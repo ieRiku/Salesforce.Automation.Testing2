@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>9/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Sep 14 19:17:11 IST 2025</td>
+<td>Started on:</td><td>Sun Sep 14 19:29:40 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>105 seconds (105489 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105554 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,125 +76,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.CartTest.cartAddTest()'><b>cartAddTest</b><br>Test class: tests.CartTest<br>Parameters: firefox</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+<td title='tests.CartTest.buyProducts()'><b>buyProducts</b><br>Test class: tests.CartTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@name=&apos;proceedToRetailCheckout&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.getCartProductTitle(CartPage.java:108)
-	at pages.CartPage.cartAdd(CartPage.java:137)
-	at tests.CartTest.cartAddTest(CartTest.java:23)
+	at pages.CartPage.proceedToBuyFromCart(CartPage.java:155)
+	at tests.CartTest.buyProducts(CartTest.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;proceedToRetailCheckout&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 23 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1495912491", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1495912491'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.getCartProductTitle(CartPage.java:108)
-	at pages.CartPage.cartAdd(CartPage.java:137)
-	at tests.CartTest.cartAddTest(CartTest.java:23)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 23 more
-</pre></div></td>
-<td>12</td>
-<td>tests.CartTest@49e5f737</td></tr>
-<tr>
-<td title='tests.CartTest.deleteFromCart()'><b>deleteFromCart</b><br>Test class: tests.CartTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.deleteProductFromCart(CartPage.java:123)
-	at tests.CartTest.deleteFromCart(CartTest.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=//input[@name=&apos;proceedToRetailCheckout&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -216,12 +116,12 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	... 22 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1879650507", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1879650507'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span&apos; (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1152370749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1152370749'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@name=&apos;proceedToRetailCheckout&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.deleteProductFromCart(CartPage.java:123)
-	at tests.CartTest.deleteFromCart(CartTest.java:34)
+	at pages.CartPage.proceedToBuyFromCart(CartPage.java:155)
+	at tests.CartTest.buyProducts(CartTest.java:38)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -242,14 +142,14 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;proceedToRetailCheckout&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=//input[@name=&apos;proceedToRetailCheckout&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -276,14 +176,14 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	... 22 more
 </pre></div></td>
 <td>10</td>
-<td>tests.CartTest@49e5f737</td></tr>
+<td>tests.CartTest@445b295b</td></tr>
 <tr>
 <td title='tests.CartTest.placeOrder()'><b>placeOrder</b><br>Test class: tests.CartTest</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.buyingIsEnabled(CartPage.java:167)
-	at tests.CartTest.placeOrder(CartTest.java:49)
+	at pages.CartPage.buyingIsEnabled(CartPage.java:166)
+	at tests.CartTest.placeOrder(CartTest.java:47)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -294,9 +194,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=//span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=//span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -316,12 +216,12 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	... 22 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1195754107", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1195754107'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766887074", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace766887074'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.buyingIsEnabled(CartPage.java:167)
-	at tests.CartTest.placeOrder(CartTest.java:49)
+	at pages.CartPage.buyingIsEnabled(CartPage.java:166)
+	at tests.CartTest.placeOrder(CartTest.java:47)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -347,9 +247,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=//span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=//span[@id=&apos;checkout-primary-continue-button-id-announce&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -374,27 +274,27 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	... 22 more
 </pre></div></td>
 <td>10</td>
-<td>tests.CartTest@49e5f737</td></tr>
+<td>tests.CartTest@445b295b</td></tr>
 <tr>
-<td title='tests.CartTest.buyProducts()'><b>buyProducts</b><br>Test class: tests.CartTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@name=&apos;proceedToRetailCheckout&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+<td title='tests.CartTest.deleteFromCart()'><b>deleteFromCart</b><br>Test class: tests.CartTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.proceedToBuyFromCart(CartPage.java:156)
-	at tests.CartTest.buyProducts(CartTest.java:40)
+	at pages.CartPage.deleteProductFromCart(CartPage.java:122)
+	at tests.CartTest.deleteFromCart(CartTest.java:33)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;proceedToRetailCheckout&apos;]
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=//input[@name=&apos;proceedToRetailCheckout&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -416,12 +316,12 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	... 22 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1733382238", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1733382238'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@name=&apos;proceedToRetailCheckout&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace493221551", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace493221551'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CartPage.proceedToBuyFromCart(CartPage.java:156)
-	at tests.CartTest.buyProducts(CartTest.java:40)
+	at pages.CartPage.deleteProductFromCart(CartPage.java:122)
+	at tests.CartTest.deleteFromCart(CartTest.java:33)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -442,14 +342,14 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;proceedToRetailCheckout&apos;]
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b, findElement {using=xpath, value=//input[@name=&apos;proceedToRetailCheckout&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11292, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]/div[4]/div/div[3]/div[1]/span[2]/span}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -476,7 +376,107 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 	... 22 more
 </pre></div></td>
 <td>10</td>
-<td>tests.CartTest@49e5f737</td></tr>
+<td>tests.CartTest@445b295b</td></tr>
+<tr>
+<td title='tests.CartTest.cartAddTest()'><b>cartAddTest</b><br>Test class: tests.CartTest<br>Parameters: firefox</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.CartPage.getCartProductTitle(CartPage.java:107)
+	at pages.CartPage.cartAdd(CartPage.java:136)
+	at tests.CartTest.cartAddTest(CartTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 23 more
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace776591734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace776591734'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.CartPage.getCartProductTitle(CartPage.java:107)
+	at pages.CartPage.cartAdd(CartPage.java:136)
+	at tests.CartTest.cartAddTest(CartTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [44989e1b-9799-4659-ac3b-e9c69f6b017b, findElement {using=xpath, value=(//div[@class=&apos;a-row sc-list-item sc-java-remote-feature&apos;])[1]//span[@class=&apos;a-truncate-cut&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 800, moz:profile: C:\Users\trex3\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 44989e1b-9799-4659-ac3b-e9c69f6b017b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 23 more
+</pre></div></td>
+<td>13</td>
+<td>tests.CartTest@445b295b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -487,50 +487,50 @@ Session ID: d16cb9cc-2bf8-4c2f-801d-51d51d9ca75b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.SearchTest.testSortLowToHigh()'><b>testSortLowToHigh</b><br>Test class: tests.SearchTest</td>
-<td></td>
-<td>2</td>
-<td>tests.SearchTest@445b295b</td></tr>
-<tr>
-<td title='tests.CartTest.modifyQuantity()'><b>modifyQuantity</b><br>Test class: tests.CartTest</td>
-<td></td>
-<td>0</td>
-<td>tests.CartTest@49e5f737</td></tr>
-<tr>
-<td title='tests.SearchTest.testViewProductDetails()'><b>testViewProductDetails</b><br>Test class: tests.SearchTest</td>
-<td></td>
-<td>7</td>
-<td>tests.SearchTest@445b295b</td></tr>
-<tr>
 <td title='tests.SearchTest.testBlankSearch()'><b>testBlankSearch</b><br>Test class: tests.SearchTest</td>
 <td></td>
-<td>3</td>
-<td>tests.SearchTest@445b295b</td></tr>
+<td>2</td>
+<td>tests.SearchTest@1757cd72</td></tr>
+<tr>
+<td title='tests.LoginTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: tests.LoginTest<br>Parameters: firefox</td>
+<td></td>
+<td>13</td>
+<td>tests.LoginTest@2e377400</td></tr>
 <tr>
 <td title='tests.SearchTest.testSearchProduct()'><b>testSearchProduct</b><br>Test class: tests.SearchTest</td>
 <td></td>
 <td>3</td>
-<td>tests.SearchTest@445b295b</td></tr>
+<td>tests.SearchTest@1757cd72</td></tr>
+<tr>
+<td title='tests.SearchTest.testSortLowToHigh()'><b>testSortLowToHigh</b><br>Test class: tests.SearchTest</td>
+<td></td>
+<td>1</td>
+<td>tests.SearchTest@1757cd72</td></tr>
 <tr>
 <td title='tests.LoginTest.verifyLoginTest()'><b>verifyLoginTest</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>2</td>
-<td>tests.LoginTest@1757cd72</td></tr>
+<td>tests.LoginTest@2e377400</td></tr>
 <tr>
 <td title='tests.LoginTest.validLoginTest()'><b>validLoginTest</b><br>Test class: tests.LoginTest</td>
 <td></td>
-<td>7</td>
-<td>tests.LoginTest@1757cd72</td></tr>
-<tr>
-<td title='tests.LoginTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: tests.LoginTest<br>Parameters: firefox</td>
-<td></td>
-<td>11</td>
-<td>tests.LoginTest@1757cd72</td></tr>
+<td>8</td>
+<td>tests.LoginTest@2e377400</td></tr>
 <tr>
 <td title='tests.SearchTest.testApplyFilters()'><b>testApplyFilters</b><br>Test class: tests.SearchTest</td>
 <td></td>
-<td>10</td>
-<td>tests.SearchTest@445b295b</td></tr>
+<td>7</td>
+<td>tests.SearchTest@1757cd72</td></tr>
+<tr>
+<td title='tests.SearchTest.testViewProductDetails()'><b>testViewProductDetails</b><br>Test class: tests.SearchTest</td>
+<td></td>
+<td>8</td>
+<td>tests.SearchTest@1757cd72</td></tr>
+<tr>
+<td title='tests.CartTest.modifyQuantity()'><b>modifyQuantity</b><br>Test class: tests.CartTest</td>
+<td></td>
+<td>0</td>
+<td>tests.CartTest@445b295b</td></tr>
 </table><p>
 </body>
 </html>
