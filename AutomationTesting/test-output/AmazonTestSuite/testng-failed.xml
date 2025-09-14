@@ -7,17 +7,6 @@
   <test thread-count="2" parallel="tests" name="LoginAndSearchTest_Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.CartTest">
-        <methods>
-          <include name="modifyQuantity"/>
-          <include name="placeOrder"/>
-          <include name="deleteFromCart"/>
-          <include name="cartAddTest"/>
-          <include name="quitBrowser"/>
-          <include name="buyProducts"/>
-          <include name="setDriver"/>
-        </methods>
-      </class> <!-- tests.CartTest -->
       <class name="tests.SearchTest">
         <methods>
           <include name="testApplyFilters"/>

@@ -66,11 +66,11 @@ public class SearchPage {
     @FindBy(xpath = "\"//div[@data-component-type='s-search-result']\"")
     private WebElement allElementsLocated;
     
-    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-2']/span/a/span")
-    private List<WebElement> rangeElement;
-    
-//    @FindBy(xpath = "//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]")
+//    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-2']/span/a/span")
 //    private List<WebElement> rangeElement;
+    
+    @FindBy(xpath = "//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]")
+    private List<WebElement> rangeElement;
 
 
     @FindBy(xpath = "//li[@id='p_72/1318476031']/span/div/a/i")
@@ -101,8 +101,7 @@ public class SearchPage {
 //	}
 	
 	public void selectBrand(String brand) {
-	    By brandLocator = By.xpath(
-	        "//div[contains(@class, 'a-checkbox-fancy')][following-sibling::span[contains(text(), '" + brand + "')]]");
+	    By brandLocator = By.xpath("//div[contains(@class, 'a-checkbox-fancy')][following-sibling::span[contains(text(), '" + brand + "')]]");
 	    wait.until(ExpectedConditions.elementToBeClickable(brandLocator)).click();
 	}
 
@@ -140,7 +139,7 @@ public class SearchPage {
     		priceFilter = e;
     		break;
     	}
-        js.executeScript("arguments[0].scrollIntoView(true);", priceFilter);
+        //js.executeScript("arguments[0].scrollIntoView(true);", priceFilter);
     	wait.until(ExpectedConditions.elementToBeClickable(priceFilter)).click();
     }
 

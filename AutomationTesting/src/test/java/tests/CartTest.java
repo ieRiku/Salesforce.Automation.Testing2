@@ -18,22 +18,22 @@ public class CartTest extends DriverSetup {
 	}
 	
 	@Parameters("browser")
-	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 1)
-	public void cartAddTest(String browser){
+	@Test (groups = {"regression", "cart"}, priority = 9)
+	public void cartAddTest(String browser) {
 		cp.cartAdd(browser);
 	}
 	
-	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 2)
+	@Test (groups = {"regression", "cart"}, priority = 10)
 	public void modifyQuantity() {
 		cp.quantityModify();
 	}
 	
-	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 3)
+	@Test (groups = {"regression", "cart"}, priority = 11)
 	public void deleteFromCart() {
 		cp.deleteProductFromCart();;
 	}
 	
-	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 4)
+	@Test (groups = {"regression", "cart"}, priority = 12)
 	public void buyProducts(){
 		cp.proceedToBuyFromCart();
 		String address = cp.getAddress();
@@ -42,7 +42,7 @@ public class CartTest extends DriverSetup {
 		}
 	}
 	
-	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 5)
+	@Test (groups = {"regression", "cart"}, priority = 13)
 	public void placeOrder() {
 		boolean canMoveToOrder = cp.buyingIsEnabled();
 		if(!canMoveToOrder) {

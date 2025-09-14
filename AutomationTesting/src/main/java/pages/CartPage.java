@@ -67,7 +67,7 @@ public class CartPage {
 	@FindBy(xpath = "//span[@id='checkout-primary-continue-button-id-announce']")
 	private WebElement orderPlace;
 	
-	@FindBy(xpath = "//div[@id='ewc-compact-actions-container']//span/a[contains(text(), 'Go to Cart')]")
+	@FindBy(xpath = "//div[@id='nav-cart-text-container']/span[2]")
 	private WebElement goToCartButton;
 
 	
@@ -129,7 +129,8 @@ public class CartPage {
 			message = getSuccessMessage();
 		}
 		clickGoToCart(browser);
-		String cartTitle = getCartProductTitle();
+		String cartTitle = null;
+		cartTitle = getCartProductTitle();
 
 		System.out.println("Product Title: " + title);
 		System.out.println("Success Message: " + message);
