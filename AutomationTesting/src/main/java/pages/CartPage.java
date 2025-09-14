@@ -42,9 +42,6 @@ public class CartPage {
 	@FindBy(xpath = "//span[@class='a-button a-button-primary attach-button-large attach-primary-cart-button']//input[@type='submit']")
 	private WebElement goToCart;
 	
-//	@FindBy(xpath = "(//span[@class='a-truncate-cut'][contains(text(),\"HP\")])[1]")
-//	private WebElement cartProductTitleElement;
-	
 	@FindBy(xpath = "(//div[@class='a-row sc-list-item sc-java-remote-feature'])[1]//span[@class='a-truncate-cut']")
 	private WebElement cartProductTitleElement;
 	
@@ -63,6 +60,9 @@ public class CartPage {
 
 	@FindBy(xpath = "//input[@name='proceedToRetailCheckout']")
 	private WebElement proceedToBuy;
+	
+//	@FindBy(xpath = "//span[@id='sc-buy-box-ptc-button-announce']")
+//	private WebElement proceedToBuy;
 	
 	@FindBy(xpath = "//span[@id='deliver-to-address-text']")
 	private WebElement address;
@@ -95,7 +95,7 @@ public class CartPage {
 	public void clickGoToCart(String browser) {
 		if(browser.equalsIgnoreCase("firefox")) {
 			wait.until(ExpectedConditions.elementToBeClickable(goToCartButton));
-			goToCartButton.click();
+			actions.moveToElement(goToCartButton).click().perform();
 		}
 		else if (browser.equalsIgnoreCase("chrome")) {
 			wait.until(ExpectedConditions.elementToBeClickable(goToCart));
@@ -146,9 +146,15 @@ public class CartPage {
 	}
 	
 	
+//	public void proceedToBuyFromCart() {
+//		wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
+//		proceedToBuy.click();
+//	}
+	
 	public void proceedToBuyFromCart() {
-		wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
-		proceedToBuy.click();
+	    wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
+	    Actions actions = new Actions(driver);
+	    actions.moveToElement(proceedToBuy).click().perform();
 	}
 	
 	public String getAddress() {

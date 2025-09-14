@@ -24,13 +24,13 @@ public class CartTest extends DriverSetup {
 	}
 	
 	@Test (groups = {"regression", "cart"}, priority = 10)
-	public void modifyQuantity() {
+	public void modifyQuantity(){
 		cp.quantityModify();
 	}
 	
 	@Test (groups = {"regression", "cart"}, priority = 11)
 	public void deleteFromCart() {
-		cp.deleteProductFromCart();;
+		cp.deleteProductFromCart();
 	}
 	
 	@Test (groups = {"regression", "cart"}, priority = 12)
