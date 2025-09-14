@@ -9,31 +9,32 @@ import base.DriverSetup;
 import pages.CartPage;
 
 public class CartTest extends DriverSetup {
-	static CartPage cp;
+	CartPage cp;
 	
 	@Parameters("browser")
 	@BeforeClass
-	public static void setDriver(String browser){
+	public void setDriver(String browser){
 		cp = new CartPage(DriverSetup.getDriver(browser));
 	}
 	
+	@Parameters("browser")
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 1)
-	public static void cartAddTest(){
-		cp.cartAdd();
+	public void cartAddTest(String browser){
+		cp.cartAdd(browser);
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 2)
-	public static void modifyQuantity() {
+	public void modifyQuantity() {
 		cp.quantityModify();
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 3)
-	public static void deleteFromCart() {
+	public void deleteFromCart() {
 		cp.deleteProductFromCart();;
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 4)
-	public static void buyProducts(){
+	public void buyProducts(){
 		cp.proceedToBuyFromCart();
 		String address = cp.getAddress();
 		if(address.contains("Goai")) {
@@ -42,7 +43,7 @@ public class CartTest extends DriverSetup {
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 5)
-	public static void placeOrder() {
+	public void placeOrder() {
 		boolean canMoveToOrder = cp.buyingIsEnabled();
 		if(!canMoveToOrder) {
 			System.out.println("cannot order");
@@ -50,7 +51,7 @@ public class CartTest extends DriverSetup {
 	}
 		
 	@AfterClass
-	public static void quitBrowser() {
+	public void quitBrowser() {
 		closeDriver();
 	}
 }

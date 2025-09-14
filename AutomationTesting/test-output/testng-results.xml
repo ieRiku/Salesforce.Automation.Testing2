@@ -1,27 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-14T10:52:11 IST" name="Smoke Suite" finished-at="2025-09-14T10:52:36 IST" duration-ms="25147">
+  <suite started-at="2025-09-14T12:16:45 IST" name="AmazonTestSuite" finished-at="2025-09-14T12:17:55 IST" duration-ms="70217">
     <groups>
+      <group name="search">
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" name="testSearchProduct" class="tests.SearchTest"/>
+        <method signature="SearchTest.testApplyFilters()[pri:2, instance:tests.SearchTest@510f3d34]" name="testApplyFilters" class="tests.SearchTest"/>
+        <method signature="SearchTest.testSortLowToHigh()[pri:3, instance:tests.SearchTest@510f3d34]" name="testSortLowToHigh" class="tests.SearchTest"/>
+        <method signature="SearchTest.testBlankSearch()[pri:4, instance:tests.SearchTest@510f3d34]" name="testBlankSearch" class="tests.SearchTest"/>
+        <method signature="SearchTest.testViewProductDetails()[pri:5, instance:tests.SearchTest@510f3d34]" name="testViewProductDetails" class="tests.SearchTest"/>
+      </group> <!-- search -->
       <group name="regression">
-        <method signature="SmokeTest.invalidLoginTest()[pri:1, instance:tests.SmokeTest@55fe41ea]" name="invalidLoginTest" class="tests.SmokeTest"/>
-        <method signature="SmokeTest.verifyLoginTest()[pri:2, instance:tests.SmokeTest@55fe41ea]" name="verifyLoginTest" class="tests.SmokeTest"/>
-        <method signature="SmokeTest.validLoginTest()[pri:3, instance:tests.SmokeTest@55fe41ea]" name="validLoginTest" class="tests.SmokeTest"/>
+        <method signature="CartTest.cartAddTest(java.lang.String)[pri:1, instance:tests.CartTest@7817fd62]" name="cartAddTest" class="tests.CartTest"/>
+        <method signature="LoginTest.invalidLoginTest(java.lang.String)[pri:1, instance:tests.LoginTest@2925bf5b]" name="invalidLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" name="testSearchProduct" class="tests.SearchTest"/>
+        <method signature="CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@7817fd62]" name="modifyQuantity" class="tests.CartTest"/>
+        <method signature="LoginTest.verifyLoginTest()[pri:2, instance:tests.LoginTest@2925bf5b]" name="verifyLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testApplyFilters()[pri:2, instance:tests.SearchTest@510f3d34]" name="testApplyFilters" class="tests.SearchTest"/>
+        <method signature="CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@7817fd62]" name="deleteFromCart" class="tests.CartTest"/>
+        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@2925bf5b]" name="validLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testSortLowToHigh()[pri:3, instance:tests.SearchTest@510f3d34]" name="testSortLowToHigh" class="tests.SearchTest"/>
+        <method signature="CartTest.buyProducts()[pri:4, instance:tests.CartTest@7817fd62]" name="buyProducts" class="tests.CartTest"/>
+        <method signature="SearchTest.testBlankSearch()[pri:4, instance:tests.SearchTest@510f3d34]" name="testBlankSearch" class="tests.SearchTest"/>
+        <method signature="CartTest.placeOrder()[pri:5, instance:tests.CartTest@7817fd62]" name="placeOrder" class="tests.CartTest"/>
+        <method signature="SearchTest.testViewProductDetails()[pri:5, instance:tests.SearchTest@510f3d34]" name="testViewProductDetails" class="tests.SearchTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="SmokeTest.invalidLoginTest()[pri:1, instance:tests.SmokeTest@55fe41ea]" name="invalidLoginTest" class="tests.SmokeTest"/>
-        <method signature="SmokeTest.validLoginTest()[pri:3, instance:tests.SmokeTest@55fe41ea]" name="validLoginTest" class="tests.SmokeTest"/>
+        <method signature="LoginTest.invalidLoginTest(java.lang.String)[pri:1, instance:tests.LoginTest@2925bf5b]" name="invalidLoginTest" class="tests.LoginTest"/>
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" name="testSearchProduct" class="tests.SearchTest"/>
+        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@2925bf5b]" name="validLoginTest" class="tests.LoginTest"/>
       </group> <!-- smoke -->
       <group name="login">
-        <method signature="SmokeTest.invalidLoginTest()[pri:1, instance:tests.SmokeTest@55fe41ea]" name="invalidLoginTest" class="tests.SmokeTest"/>
-        <method signature="SmokeTest.verifyLoginTest()[pri:2, instance:tests.SmokeTest@55fe41ea]" name="verifyLoginTest" class="tests.SmokeTest"/>
-        <method signature="SmokeTest.validLoginTest()[pri:3, instance:tests.SmokeTest@55fe41ea]" name="validLoginTest" class="tests.SmokeTest"/>
+        <method signature="LoginTest.invalidLoginTest(java.lang.String)[pri:1, instance:tests.LoginTest@2925bf5b]" name="invalidLoginTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.verifyLoginTest()[pri:2, instance:tests.LoginTest@2925bf5b]" name="verifyLoginTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.validLoginTest()[pri:3, instance:tests.LoginTest@2925bf5b]" name="validLoginTest" class="tests.LoginTest"/>
       </group> <!-- login -->
+      <group name="cart">
+        <method signature="CartTest.cartAddTest(java.lang.String)[pri:1, instance:tests.CartTest@7817fd62]" name="cartAddTest" class="tests.CartTest"/>
+        <method signature="CartTest.modifyQuantity()[pri:2, instance:tests.CartTest@7817fd62]" name="modifyQuantity" class="tests.CartTest"/>
+        <method signature="CartTest.deleteFromCart()[pri:3, instance:tests.CartTest@7817fd62]" name="deleteFromCart" class="tests.CartTest"/>
+        <method signature="CartTest.buyProducts()[pri:4, instance:tests.CartTest@7817fd62]" name="buyProducts" class="tests.CartTest"/>
+        <method signature="CartTest.placeOrder()[pri:5, instance:tests.CartTest@7817fd62]" name="placeOrder" class="tests.CartTest"/>
+      </group> <!-- cart -->
     </groups>
-    <test started-at="2025-09-14T10:52:11 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-14T10:52:36 IST" duration-ms="25147">
-      <class name="tests.SmokeTest">
-        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.SmokeTest@55fe41ea]" started-at="2025-09-14T10:52:11 IST" name="setDriver" finished-at="2025-09-14T10:52:15 IST" duration-ms="4196" status="PASS">
+    <test started-at="2025-09-14T12:16:45 IST" name="LoginAndSearchTest_Chrome" finished-at="2025-09-14T12:17:55 IST" duration-ms="70217">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:16:45 IST" name="setDriver" finished-at="2025-09-14T12:16:50 IST" duration-ms="4729" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,23 +57,103 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="invalidLoginTest()[pri:1, instance:tests.SmokeTest@55fe41ea]" started-at="2025-09-14T10:52:15 IST" name="invalidLoginTest" finished-at="2025-09-14T10:52:27 IST" duration-ms="11518" status="PASS">
+        <test-method signature="invalidLoginTest(java.lang.String)[pri:1, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:16:50 IST" name="invalidLoginTest" finished-at="2025-09-14T12:17:02 IST" duration-ms="11694" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method signature="verifyLoginTest()[pri:2, instance:tests.SmokeTest@55fe41ea]" started-at="2025-09-14T10:52:27 IST" name="verifyLoginTest" finished-at="2025-09-14T10:52:28 IST" duration-ms="1674" status="PASS">
+        <test-method signature="verifyLoginTest()[pri:2, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:17:02 IST" name="verifyLoginTest" finished-at="2025-09-14T12:17:05 IST" duration-ms="3096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginTest -->
-        <test-method signature="validLoginTest()[pri:3, instance:tests.SmokeTest@55fe41ea]" started-at="2025-09-14T10:52:28 IST" name="validLoginTest" finished-at="2025-09-14T10:52:35 IST" duration-ms="7075" status="PASS">
+        <test-method signature="validLoginTest()[pri:3, instance:tests.LoginTest@2925bf5b]" started-at="2025-09-14T12:17:05 IST" name="validLoginTest" finished-at="2025-09-14T12:17:11 IST" duration-ms="6300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.SmokeTest@55fe41ea]" started-at="2025-09-14T10:52:35 IST" name="quitBrowser" finished-at="2025-09-14T10:52:36 IST" duration-ms="620" status="PASS">
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.CartTest">
+        <test-method is-config="true" signature="setDriver(java.lang.String)[pri:0, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:41 IST" name="setDriver" finished-at="2025-09-14T12:17:41 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="cartAddTest(java.lang.String)[pri:1, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:41 IST" name="cartAddTest" depends-on-groups="search" finished-at="2025-09-14T12:17:47 IST" duration-ms="5878" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartAddTest -->
+        <test-method signature="modifyQuantity()[pri:2, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:47 IST" name="modifyQuantity" depends-on-groups="search" finished-at="2025-09-14T12:17:48 IST" duration-ms="668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyQuantity -->
+        <test-method signature="deleteFromCart()[pri:3, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:48 IST" name="deleteFromCart" depends-on-groups="search" finished-at="2025-09-14T12:17:48 IST" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteFromCart -->
+        <test-method signature="buyProducts()[pri:4, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:48 IST" name="buyProducts" depends-on-groups="search" finished-at="2025-09-14T12:17:54 IST" duration-ms="6039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyProducts -->
+        <test-method signature="placeOrder()[pri:5, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:54 IST" name="placeOrder" depends-on-groups="search" finished-at="2025-09-14T12:17:54 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrder -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:tests.CartTest@7817fd62]" started-at="2025-09-14T12:17:54 IST" name="quitBrowser" finished-at="2025-09-14T12:17:55 IST" duration-ms="900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- tests.SmokeTest -->
+      </class> <!-- tests.CartTest -->
+      <class name="tests.SearchTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:11 IST" name="setup" finished-at="2025-09-14T12:17:11 IST" duration-ms="47" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSearchProduct()[pri:1, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:11 IST" name="testSearchProduct" depends-on-groups="login" finished-at="2025-09-14T12:17:16 IST" duration-ms="5030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchProduct -->
+        <test-method signature="testApplyFilters()[pri:2, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:16 IST" name="testApplyFilters" depends-on-groups="login" finished-at="2025-09-14T12:17:25 IST" duration-ms="9309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyFilters -->
+        <test-method signature="testSortLowToHigh()[pri:3, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:25 IST" name="testSortLowToHigh" depends-on-groups="login" finished-at="2025-09-14T12:17:28 IST" duration-ms="2776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortLowToHigh -->
+        <test-method signature="testBlankSearch()[pri:4, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:28 IST" name="testBlankSearch" depends-on-groups="login" finished-at="2025-09-14T12:17:32 IST" duration-ms="3675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBlankSearch -->
+        <test-method signature="testViewProductDetails()[pri:5, instance:tests.SearchTest@510f3d34]" started-at="2025-09-14T12:17:32 IST" name="testViewProductDetails" depends-on-groups="login" finished-at="2025-09-14T12:17:41 IST" duration-ms="9453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testViewProductDetails -->
+      </class> <!-- tests.SearchTest -->
     </test> <!-- LoginAndSearchTest_Chrome -->
-  </suite> <!-- Smoke Suite -->
+  </suite> <!-- AmazonTestSuite -->
 </testng-results>

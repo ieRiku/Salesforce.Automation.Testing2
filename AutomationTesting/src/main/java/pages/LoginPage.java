@@ -95,8 +95,10 @@ public class LoginPage {
     	driver.navigate().to(url);
     }
     
-    public void navigateGetUrl(String url) {
-    	driver.navigate().back();
+    public void navigateGetUrl(String url, String browser) {
+    	if(browser.equalsIgnoreCase("chrome")) {
+    		driver.navigate().back();
+    	}
     	driver.get(url);   
     }
     

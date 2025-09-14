@@ -11,4 +11,4 @@
 
 7. Remove depends on and implement priority from login to search to cart. (not needed anymore)
 
-8. Cross browser.
+8. Cross browser. (implemented)

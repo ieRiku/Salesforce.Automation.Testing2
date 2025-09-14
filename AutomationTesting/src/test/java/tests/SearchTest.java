@@ -21,8 +21,10 @@ public class SearchTest {
     @Parameters("browser")
     @BeforeClass
     public void setup(String browser) {
-        searchPage = new SearchPage(DriverSetup.getDriver(browser));
+        driver = DriverSetup.getDriver(browser);
+        searchPage = new SearchPage(driver);
     }
+
 
     @Test(groups = {"smoke", "regression", "search"}, dependsOnGroups = "login", priority = 1)
     public void testSearchProduct() {

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class SearchPage {
 
@@ -69,14 +70,12 @@ public class SearchPage {
 //    private WebElement rangeElement;
     
     @FindBy(xpath = "//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]")
-    private WebElement rangeElement;
+    private List<WebElement> rangeElement;
 
 
     @FindBy(xpath = "//li[@id='p_72/1318476031']/span/div/a/i")
     private WebElement ratingButton;
     
-//    @FindBy(xpath = "//*[@id='brandsRefinements']//span[contains(text(), 'HP')]")
-//    private WebElement brandFilterHP;
     
     // Actions
     public void searchProduct(String productName) {
@@ -130,8 +129,13 @@ public class SearchPage {
     // Apply price range using drag and drop on sliders
     public void applyPriceRange() {
     	js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", rangeElement);
-    	wait.until(ExpectedConditions.elementToBeClickable(rangeElement)).click();
+    	WebElement priceFilter = null;
+    	for(WebElement e: rangeElement) {
+    		priceFilter = e;
+    		break;
+    	}
+        js.executeScript("arguments[0].scrollIntoView(true);", priceFilter);
+    	wait.until(ExpectedConditions.elementToBeClickable(priceFilter)).click();
     }
 
     // Apply customer ratings using the ratingButton WebElement

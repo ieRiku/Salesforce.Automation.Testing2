@@ -67,6 +67,10 @@ public class CartPage {
 	@FindBy(xpath = "//span[@id='checkout-primary-continue-button-id-announce']")
 	private WebElement orderPlace;
 	
+	@FindBy(xpath = "//div[@id='ewc-compact-actions-container']//span/a[contains(text(), 'Go to Cart')]")
+	private WebElement goToCartButton;
+
+	
 	
 	
 	// Methods to interact with each WebElement using Actions
@@ -85,9 +89,15 @@ public class CartPage {
 		return successMessage.getText();
 	}
 
-	public void clickGoToCart() {
-		wait.until(ExpectedConditions.elementToBeClickable(goToCart));
-		actions.moveToElement(goToCart).click().perform();
+	public void clickGoToCart(String browser) {
+		if(browser.equalsIgnoreCase("firefox")) {
+			wait.until(ExpectedConditions.elementToBeClickable(goToCartButton));
+			goToCartButton.click();
+		}
+		else if (browser.equalsIgnoreCase("chrome")) {
+			wait.until(ExpectedConditions.elementToBeClickable(goToCart));
+			actions.moveToElement(goToCart).click().perform();
+		}
 	}
 
 	public String getCartProductTitle() {
@@ -111,11 +121,14 @@ public class CartPage {
 	}
 	
 	
-	public void cartAdd(){
+	public void cartAdd(String browser){
 		clickAddToCart();
 		String title = getProductTitle();
-		String message = getSuccessMessage();
-		clickGoToCart();
+		String message = null;
+		if(browser.equalsIgnoreCase("chrome")) {
+			message = getSuccessMessage();
+		}
+		clickGoToCart(browser);
 		String cartTitle = getCartProductTitle();
 
 		System.out.println("Product Title: " + title);

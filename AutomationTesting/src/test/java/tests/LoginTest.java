@@ -10,17 +10,17 @@ import base.DriverSetup;
 import pages.LoginPage;
 
 public class LoginTest extends DriverSetup{
-	static LoginPage lp;
+	LoginPage lp;
 	
 	@Parameters("browser")
 	@BeforeClass
-	public static void setDriver(String browser) {
+	public void setDriver(String browser) {
 		ConfigLoader.loadConfig();
 		lp = new LoginPage(DriverSetup.getDriver(browser));
 	}
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=3)
-	public static void validLoginTest(){
+	public void validLoginTest(){
 		lp.clickLoginButton();
 		lp.enterEmail(ConfigLoader.getProperty("username"));
 		lp.clickContinue();
@@ -32,16 +32,17 @@ public class LoginTest extends DriverSetup{
 	    
 	    Assert.assertTrue(actualName.contains(expectedName), "Unexpected Name");
 	}
-
+	
+	@Parameters("browser")
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
-	public static void invalidLoginTest(){
+	public void invalidLoginTest(String browser){
 		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
 		lp.enterEmail("someone@gmail.com");
 		lp.clickContinue();
 		lp.enterPassword("pass1234");
 		lp.clickSubmitLogin();
-		lp.navigateGetUrl(ConfigLoader.getProperty("url"));
+		lp.navigateGetUrl(ConfigLoader.getProperty("url"), browser);
 		
 		String actualName = lp.returnUserName();
 	    String expectedName = "Alex";
@@ -50,7 +51,7 @@ public class LoginTest extends DriverSetup{
 	}
 
 	@Test (groups = {"regression", "login"}, priority=2)
-	public static void verifyLoginTest() {
+	public void verifyLoginTest() {
 		lp.navigateToUrl(ConfigLoader.getProperty("url"));
 		System.out.println(lp.loginButtonEnabled());
 		System.out.println(lp.loginButtonDisplayed());
