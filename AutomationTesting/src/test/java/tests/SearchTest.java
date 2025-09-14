@@ -33,7 +33,7 @@ public class SearchTest {
     @Test(groups = {"regression", "search"}, dependsOnGroups = "login", priority = 2)
     public void testApplyFilters(){
         // Apply brand filter
-        searchPage.selectBrand("Dell");
+        searchPage.selectBrand("HP");
         // Apply price range
         searchPage.applyPriceRange();
         
