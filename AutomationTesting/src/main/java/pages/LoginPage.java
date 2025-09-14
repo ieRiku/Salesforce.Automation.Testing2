@@ -50,9 +50,19 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"nav-link-accountList-nav-line-1\"]")
     private WebElement userNameText;
     
+    @FindBy(xpath = "//h4[contains(text(), 'Click the button below to continue shopping')]")
+    private WebElement continueShoppingHeader;
+
+    
     //..............................................//
     public void clickSubmitButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+    	try {
+	    	wait.until(ExpectedConditions.visibilityOf(continueShoppingHeader));
+	        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+    	}
+    	catch(Exception e) {
+    		System.out.println("Change in amazon navigation");
+    	}
     }
 
     public void clickLoginButton() {

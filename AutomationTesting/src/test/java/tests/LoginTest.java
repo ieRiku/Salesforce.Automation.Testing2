@@ -34,7 +34,7 @@ public class LoginTest extends DriverSetup{
 	}
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
-	public static void invalidLoginTest() {
+	public static void invalidLoginTest(){
 		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
 		lp.enterEmail("someone@gmail.com");

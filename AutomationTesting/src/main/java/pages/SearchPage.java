@@ -75,6 +75,9 @@ public class SearchPage {
     @FindBy(xpath = "//li[@id='p_72/1318476031']/span/div/a/i")
     private WebElement ratingButton;
     
+//    @FindBy(xpath = "//*[@id='brandsRefinements']//span[contains(text(), 'HP')]")
+//    private WebElement brandFilterHP;
+    
     // Actions
     public void searchProduct(String productName) {
         wait.until(ExpectedConditions.visibilityOf(searchBox)).clear();
@@ -93,10 +96,15 @@ public class SearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(lowToHighOption)).click();
     }
     
-    public void selectBrand(String brand) {
-        By brandLocator = By.xpath("//span[text()='" + brand + "']/preceding-sibling::div");
-        wait.until(ExpectedConditions.elementToBeClickable(brandLocator)).click();
-    }
+//    public void selectBrand(String brand) {
+//        By brandLocator = By.xpath("//span[text()='" + brand + "']/preceding-sibling::div");
+//        wait.until(ExpectedConditions.elementToBeClickable(brandLocator)).click();
+//    }
+    
+	public void selectBrand(String brand) {
+		By brandLocator = By.xpath("//*[@id='brandsRefinements']//span[contains(text(), '" + brand + "')]");
+		wait.until(ExpectedConditions.elementToBeClickable(brandLocator)).click();
+	}
 
     public void clickFirstProduct() {
         wait.until(ExpectedConditions.elementToBeClickable(firstProduct)).click();

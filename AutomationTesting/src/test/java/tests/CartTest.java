@@ -18,8 +18,9 @@ public class CartTest extends DriverSetup {
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 1)
-	public static void cartAddTest() {
+	public static void cartAddTest() throws InterruptedException {
 		cp.cartAdd();
+		Thread.sleep(1000000);
 	}
 	
 	@Test (groups = {"regression", "cart"}, dependsOnGroups = "search", priority = 2)
