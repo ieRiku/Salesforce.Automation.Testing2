@@ -1,7 +1,6 @@
 package tests;
 
 import base.DriverSetup;
-import runners.RetryAnalyzer;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -33,13 +32,13 @@ public class SearchTest {
         Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Search results not displayed!");
     }
     
-    @Test(groups = {"regression", "search"}, priority = 5, retryAnalyzer = RetryAnalyzer.class)
+    @Test(groups = {"regression", "search"}, priority = 5)
     public void testApplyFilters(){
         // Apply brand filter
         searchPage.selectBrand("HP");
         // Apply price range
         System.out.println("chk1");
-        //searchPage.applyPriceRange();
+        searchPage.applyPriceRange();
         
         //Thread.sleep(100000);
         

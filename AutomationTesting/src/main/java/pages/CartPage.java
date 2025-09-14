@@ -27,7 +27,10 @@ public class CartPage {
 		this.driver = null;
 	}
 
-	@FindBy(xpath = "//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']")
+//	@FindBy(xpath = "//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']")
+//	private WebElement addCartButton;
+	
+	@FindBy(xpath = "//*[@id='a-accordion-auto-6']//*[@id='add-to-cart-button']")
 	private WebElement addCartButton;
 	
 	@FindBy(xpath = "//span[@id='productTitle']")

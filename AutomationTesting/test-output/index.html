@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AmazonTestSuite" class="navigator-link">
-              <span class="suite-name border-passed">AmazonTestSuite</span>
+              <span class="suite-name border-failed">AmazonTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">13 methods,   13 passed</span>
+                    <span class="method-stats">13 methods, 1 failed,   12 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AmazonTestSuite" class="hide-methods failed suite-AmazonTestSuite"> (hide)</a> <!-- hide-methods failed suite-AmazonTestSuite -->
+                      <a href="#" panel-name="suite-AmazonTestSuite" class="show-methods failed suite-AmazonTestSuite"> (show)</a> <!-- show-methods failed suite-AmazonTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-AmazonTestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AmazonTestSuite" title="tests.SearchTest" class="method navigator-link" hash-for-method="testApplyFilters">testApplyFilters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AmazonTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -129,11 +143,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-AmazonTestSuite" title="tests.CartTest" class="method navigator-link" hash-for-method="placeOrder">placeOrder</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AmazonTestSuite" title="tests.SearchTest" class="method navigator-link" hash-for-method="testApplyFilters">testApplyFilters</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -178,6 +187,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AmazonTestSuite" class="panel AmazonTestSuite">
+          <div class="suite-AmazonTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApplyFilters">
+                  </a> <!-- testApplyFilters -->
+                  <span class="method-name">testApplyFilters</span>
+                  <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;scrollIntoView&apos;)
+  (Session info: chrome=140.0.7339.128)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [66c1db86638502df66fcb6a3d2960448, executeScript {script=arguments[0].scrollIntoView(true);, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\trex3\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58571}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58571/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 66c1db86638502df66fcb6a3d2960448
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:475)
+	at pages.SearchPage.applyPriceRange(SearchPage.java:142)
+	at tests.SearchTest.testApplyFilters(SearchTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonTestSuite-class-failed -->
           <div class="suite-AmazonTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -258,13 +307,6 @@
               <span class="class-name">tests.SearchTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testApplyFilters">
-                  </a> <!-- testApplyFilters -->
-                  <span class="method-name">testApplyFilters</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testBlankSearch">
@@ -493,60 +535,60 @@ data.addRows(13);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'invalidLoginTest')
 data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 8884);
+data.setCell(0, 3, 9595);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testViewProductDetails')
 data.setCell(1, 2, 'tests.SearchTest')
-data.setCell(1, 3, 8618);
+data.setCell(1, 3, 7269);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'buyProducts')
 data.setCell(2, 2, 'tests.CartTest')
-data.setCell(2, 3, 6988);
+data.setCell(2, 3, 6409);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testApplyFilters')
-data.setCell(3, 2, 'tests.SearchTest')
-data.setCell(3, 3, 5713);
+data.setCell(3, 1, 'validLoginTest')
+data.setCell(3, 2, 'tests.LoginTest')
+data.setCell(3, 3, 6031);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'validLoginTest')
-data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 5500);
+data.setCell(4, 1, 'cartAddTest')
+data.setCell(4, 2, 'tests.CartTest')
+data.setCell(4, 3, 4452);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'cartAddTest')
-data.setCell(5, 2, 'tests.CartTest')
-data.setCell(5, 3, 4460);
+data.setCell(5, 1, 'testSearchProduct')
+data.setCell(5, 2, 'tests.SearchTest')
+data.setCell(5, 3, 3473);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testSearchProduct')
+data.setCell(6, 1, 'testBlankSearch')
 data.setCell(6, 2, 'tests.SearchTest')
-data.setCell(6, 3, 3421);
+data.setCell(6, 3, 2226);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testBlankSearch')
+data.setCell(7, 1, 'testSortLowToHigh')
 data.setCell(7, 2, 'tests.SearchTest')
-data.setCell(7, 3, 3035);
+data.setCell(7, 3, 1670);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testSortLowToHigh')
-data.setCell(8, 2, 'tests.SearchTest')
-data.setCell(8, 3, 1698);
+data.setCell(8, 1, 'verifyLoginTest')
+data.setCell(8, 2, 'tests.LoginTest')
+data.setCell(8, 3, 1461);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyLoginTest')
-data.setCell(9, 2, 'tests.LoginTest')
-data.setCell(9, 3, 1407);
+data.setCell(9, 1, 'modifyQuantity')
+data.setCell(9, 2, 'tests.CartTest')
+data.setCell(9, 3, 506);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'modifyQuantity')
-data.setCell(10, 2, 'tests.CartTest')
-data.setCell(10, 3, 582);
+data.setCell(10, 1, 'testApplyFilters')
+data.setCell(10, 2, 'tests.SearchTest')
+data.setCell(10, 3, 391);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'deleteFromCart')
 data.setCell(11, 2, 'tests.CartTest')
-data.setCell(11, 3, 233);
+data.setCell(11, 3, 222);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'placeOrder')
 data.setCell(12, 2, 'tests.CartTest')
-data.setCell(12, 3, 34);
+data.setCell(12, 3, 48);
 window.suiteTableData['AmazonTestSuite']= { tableData: data, tableDiv: 'times-div-AmazonTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 55 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-AmazonTestSuite">
               </div> <!-- times-div-AmazonTestSuite -->
             </div> <!-- times-div -->
@@ -579,73 +621,75 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">invalidLoginTest(chrome)</span>
-                <span class="method-start">3888 ms</span>
+                <span class="method-start">3656 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginTest</span>
-                <span class="method-start">12792 ms</span>
+                <span class="method-start">13266 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validLoginTest</span>
-                <span class="method-start">14199 ms</span>
+                <span class="method-start">14728 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">19702 ms</span>
+                <span class="method-start">20762 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testSearchProduct</span>
-                <span class="method-start">19716 ms</span>
+                <span class="method-start">20773 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testApplyFilters</span>
-                <span class="method-start">23141 ms</span>
+                <span class="method-start">24249 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSortLowToHigh</span>
-                <span class="method-start">28858 ms</span>
+                <span class="method-start">24647 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testBlankSearch</span>
-                <span class="method-start">30562 ms</span>
+                <span class="method-start">26319 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testViewProductDetails</span>
-                <span class="method-start">33602 ms</span>
+                <span class="method-start">28548 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.CartTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setDriver(chrome)</span>
-                <span class="method-start">42223 ms</span>
+                <span class="method-start">35821 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">cartAddTest(chrome)</span>
-                <span class="method-start">42236 ms</span>
+                <span class="method-start">35831 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">modifyQuantity</span>
-                <span class="method-start">46698 ms</span>
+                <span class="method-start">40292 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteFromCart</span>
-                <span class="method-start">47280 ms</span>
+                <span class="method-start">40800 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">buyProducts</span>
-                <span class="method-start">47513 ms</span>
+                <span class="method-start">41022 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">placeOrder</span>
-                <span class="method-start">54503 ms</span>
+                <span class="method-start">47434 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">quitBrowser</span>
-                <span class="method-start">54538 ms</span>
+                <span class="method-start">47484 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

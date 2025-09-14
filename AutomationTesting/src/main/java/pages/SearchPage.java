@@ -139,7 +139,7 @@ public class SearchPage {
     		priceFilter = e;
     		break;
     	}
-        //js.executeScript("arguments[0].scrollIntoView(true);", priceFilter);
+        js.executeScript("arguments[0].scrollIntoView(true);", priceFilter);
     	wait.until(ExpectedConditions.elementToBeClickable(priceFilter)).click();
     }
 
