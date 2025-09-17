@@ -5,7 +5,7 @@
 		<listener class-name="runners.TestListener"/>
 	</listeners>
     <test name="LoginAndSearchTest_Chrome">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="tests.LoginTest"/>
             <class name="tests.SearchTest"/>

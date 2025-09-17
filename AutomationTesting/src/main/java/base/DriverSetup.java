@@ -1,5 +1,6 @@
 package base;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,6 +25,7 @@ public class DriverSetup {
                 options.addArguments("--width=1920");
                 options.addArguments("--height=1080");
                 driver.set(new FirefoxDriver(options));
+                driver.get().manage().window().setSize(new Dimension(1920, 1080));
                 
             } else if (browser.equalsIgnoreCase("edge")) {
                 EdgeOptions options = new EdgeOptions();
