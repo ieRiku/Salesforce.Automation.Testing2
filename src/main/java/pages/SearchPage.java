@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class SearchPage {
 
@@ -31,22 +32,18 @@ public class SearchPage {
 
     @FindBy(id = "nav-search-submit-text")
     private WebElement searchBtn;
-
-    @FindBy(xpath = "/html/body/div[1]/div[1]/span/div/h1/div/div[4]/div/div/form/span/span/span/span")
+    
+    @FindBy(xpath = "//*[starts-with(@id, 'a-autoid-') and contains(@id, '-announce')]/span[2]")
     private WebElement sortDropdown;
     
-    //Low to high option
-    @FindBy(xpath = "/html/body/div[4]/div/div/ul/li[2]/a")
+    @FindBy(xpath = "//*[@id=\"s-result-sort-select_1\"]")
     private WebElement lowToHighOption;
     
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div/div[2]/div/div/div[1]/a/h2")
+    @FindBy(xpath = "//*[contains(text(),'Results')]/following::div[@role='listitem'][1]//h2//span")
     private WebElement firstProduct;
     
     @FindBy(xpath = "//*[@id=\"titleSection\"]//*[@id=\"productTitle\"]")
     private WebElement productTitle;
-
-//    @FindBy(className = "a-price-whole")
-//    private WebElement productPrice;
   
     @FindBy(xpath = "//*[@id=\"corePriceDisplay_desktop_feature_div\"]/div[1]/span[3]/span[2]/span[2]")
     private WebElement productPrice;
@@ -54,11 +51,18 @@ public class SearchPage {
     @FindBy(xpath = "\"//div[@data-component-type='s-search-result']\"")
     private WebElement allElementsLocated;
     
-    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-3']/span/a/span")
-    private WebElement rangeElement;
+//    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-2']/span/a/span")
+//    private List<WebElement> rangeElement;
+    
+    @FindBy(xpath = "//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]")
+    private List<WebElement> rangeElement;
+    
+    By rangeLocator = By.xpath("//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]");
+
 
     @FindBy(xpath = "//li[@id='p_72/1318476031']/span/div/a/i")
     private WebElement ratingButton;
+    
     
     // Actions
     public void searchProduct(String productName) {
@@ -78,10 +82,12 @@ public class SearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(lowToHighOption)).click();
     }
     
-    public void selectBrand(String brand) {
-        By brandLocator = By.xpath("//span[text()='" + brand + "']/preceding-sibling::div");
-        wait.until(ExpectedConditions.elementToBeClickable(brandLocator)).click();
-    }
+	
+	public void selectBrand(String brand) {
+	    By brandLocator = By.xpath("//div[contains(@class, 'a-checkbox-fancy')][following-sibling::span[contains(text(), '" + brand + "')]]");
+	    wait.until(ExpectedConditions.elementToBeClickable(brandLocator)).click();
+	}    
+	
 
     public void clickFirstProduct() {
         wait.until(ExpectedConditions.elementToBeClickable(firstProduct)).click();
@@ -92,7 +98,12 @@ public class SearchPage {
     }
     
     public String getSelectedProductTitle() {
-        return wait.until(ExpectedConditions.visibilityOf(productTitle)).getText();
+    	try {
+    		return wait.until(ExpectedConditions.visibilityOf(productTitle)).getText();
+    	}
+    	catch(Exception e) {
+    		return "Product title not avaliable";
+    	}
     }
 
     public String getSelectedProductPrice() {
@@ -106,15 +117,22 @@ public class SearchPage {
     
     // Apply price range using drag and drop on sliders
     public void applyPriceRange() {
+    	wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(rangeLocator));
     	js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", rangeElement);
-    	wait.until(ExpectedConditions.elementToBeClickable(rangeElement)).click();
+    	WebElement priceFilter = null;
+    	for(WebElement e: rangeElement) {
+    		priceFilter = e;
+    		break;
+    	}
+    	js.executeScript("window.scrollBy(0, 100);");
+    	wait.until(ExpectedConditions.elementToBeClickable(priceFilter)).click();
     }
 
     // Apply customer ratings using the ratingButton WebElement
     public void applyCustomerRatings() {
+    	wait.until(ExpectedConditions.visibilityOf(ratingButton));
         js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", ratingButton);
+        js.executeScript("window.scrollBy(0, 300);");
         wait.until(ExpectedConditions.elementToBeClickable(ratingButton)).click();
     }
 }

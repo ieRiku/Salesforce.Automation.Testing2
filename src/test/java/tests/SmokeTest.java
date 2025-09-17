@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -9,18 +10,18 @@ import base.ConfigLoader;
 import base.DriverSetup;
 import pages.LoginPage;
 
-public class LoginTest extends DriverSetup{
-	LoginPage lp;
+public class SmokeTest extends DriverSetup{
+	static LoginPage lp;
 	
 	@Parameters("browser")
 	@BeforeClass
-	public void setDriver(String browser) {
+	public static void setDriver(String browser) {
 		ConfigLoader.loadConfig();
 		lp = new LoginPage(DriverSetup.getDriver(browser));
 	}
 
 	@Test (groups = {"smoke", "regression", "login"}, priority=3)
-	public void validLoginTest(){
+	public static void validLoginTest(){
 		lp.clickLoginButton();
 		lp.enterEmail(ConfigLoader.getProperty("username"));
 		lp.clickContinue();
@@ -32,17 +33,16 @@ public class LoginTest extends DriverSetup{
 	    
 	    Assert.assertTrue(actualName.contains(expectedName), "Unexpected Name");
 	}
-	
-	@Parameters("browser")
+
 	@Test (groups = {"smoke", "regression", "login"}, priority=1)
-	public void invalidLoginTest(String browser){
+	public static void invalidLoginTest() {
 		lp.clickSubmitButton();	// modified
 		lp.clickLoginButton();
-		lp.enterEmail("someone@gmail.com");
+		lp.enterEmail("invalidemail@gmail.com");
 		lp.clickContinue();
 		lp.enterPassword("pass1234");
 		lp.clickSubmitLogin();
-		lp.navigateGetUrl(ConfigLoader.getProperty("url"), browser);
+		lp.navigateToUrl(ConfigLoader.getProperty("url"));
 		
 		String actualName = lp.returnUserName();
 	    String expectedName = "Alex";
@@ -51,7 +51,7 @@ public class LoginTest extends DriverSetup{
 	}
 
 	@Test (groups = {"regression", "login"}, priority=2)
-	public void verifyLoginTest() {
+	public static void verifyLoginTest() {
 		lp.navigateToUrl(ConfigLoader.getProperty("url"));
 		System.out.println(lp.loginButtonEnabled());
 		System.out.println(lp.loginButtonDisplayed());
@@ -60,5 +60,10 @@ public class LoginTest extends DriverSetup{
 	    String expectedUrlPart = "https://www.amazon.in";
 	    
 		Assert.assertTrue(actualUrl.contains(expectedUrlPart), "Unexpected URL ");
+	}
+	
+	@AfterClass
+	public static void quitBrowser() {
+		closeDriver();
 	}
 }

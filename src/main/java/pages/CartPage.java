@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import base.DriverSetup;
 
 import java.time.Duration;
 
@@ -28,7 +27,10 @@ public class CartPage {
 		this.driver = null;
 	}
 
-	@FindBy(xpath = "//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']")
+//	@FindBy(xpath = "//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']")
+//	private WebElement addCartButton;
+	
+	@FindBy(xpath = "//*[@id='a-accordion-auto-6']//*[@id='add-to-cart-button']")
 	private WebElement addCartButton;
 	
 	@FindBy(xpath = "//span[@id='productTitle']")
@@ -40,9 +42,6 @@ public class CartPage {
 	@FindBy(xpath = "//span[@class='a-button a-button-primary attach-button-large attach-primary-cart-button']//input[@type='submit']")
 	private WebElement goToCart;
 	
-//	@FindBy(xpath = "(//span[@class='a-truncate-cut'][contains(text(),\"HP\")])[1]")
-//	private WebElement cartProductTitleElement;
-	
 	@FindBy(xpath = "(//div[@class='a-row sc-list-item sc-java-remote-feature'])[1]//span[@class='a-truncate-cut']")
 	private WebElement cartProductTitleElement;
 	
@@ -53,17 +52,27 @@ public class CartPage {
 	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-remove'])[1]")
 	private WebElement decreaseProductCount;
 	
-	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-trash'])[1]")
+//	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-trash'])[1]")
+//	private WebElement deleteFromCart;
+	
+	@FindBy(xpath = "(//div[@class='a-row sc-list-item sc-java-remote-feature'])[1]/div[4]/div/div[3]/div[1]/span[2]/span")
 	private WebElement deleteFromCart;
 
 	@FindBy(xpath = "//input[@name='proceedToRetailCheckout']")
 	private WebElement proceedToBuy;
+	
+//	@FindBy(xpath = "//span[@id='sc-buy-box-ptc-button-announce']")
+//	private WebElement proceedToBuy;
 	
 	@FindBy(xpath = "//span[@id='deliver-to-address-text']")
 	private WebElement address;
 
 	@FindBy(xpath = "//span[@id='checkout-primary-continue-button-id-announce']")
 	private WebElement orderPlace;
+	
+	@FindBy(xpath = "//div[@id='nav-cart-text-container']/span[2]")
+	private WebElement goToCartButton;
+
 	
 	
 	
@@ -83,9 +92,16 @@ public class CartPage {
 		return successMessage.getText();
 	}
 
-	public void clickGoToCart() {
-		wait.until(ExpectedConditions.elementToBeClickable(goToCart));
-		actions.moveToElement(goToCart).click().perform();
+	public void clickGoToCart(String browser) {
+		if(browser.equalsIgnoreCase("firefox")) {
+			driver.navigate().refresh();
+			wait.until(ExpectedConditions.elementToBeClickable(goToCartButton));
+			actions.moveToElement(goToCartButton).click().perform();
+		}
+		else if (browser.equalsIgnoreCase("chrome")) {
+			wait.until(ExpectedConditions.elementToBeClickable(goToCart));
+			actions.moveToElement(goToCart).click().perform();
+		}
 	}
 
 	public String getCartProductTitle() {
@@ -109,34 +125,38 @@ public class CartPage {
 	}
 	
 	
-	public void cartAdd() throws InterruptedException {
+	public void cartAdd(String browser){
 		clickAddToCart();
 		String title = getProductTitle();
-		String message = getSuccessMessage();
-		clickGoToCart();
-		String cartTitle = getCartProductTitle();
-//		Thread.sleep(2000);
-//		increaseProductCount();
-//		Thread.sleep(2000);
-//		decreaseProductCount();
-//		Thread.sleep(2000);
+		String message = null;
+		if(browser.equalsIgnoreCase("chrome")) {
+			message = getSuccessMessage();
+		}
+		clickGoToCart(browser);
+		String cartTitle = null;
+		cartTitle = getCartProductTitle();
 
 		System.out.println("Product Title: " + title);
 		System.out.println("Success Message: " + message);
 		System.out.println("Cart Product Title: " + cartTitle);
 	}
 	
-	public void quantityModify() throws InterruptedException {
+	public void quantityModify(){
 		increaseProductCount();
-		Thread.sleep(2000);
 		decreaseProductCount();
-		Thread.sleep(2000);
 	}
 	
 	
+//	public void proceedToBuyFromCart() {
+//		wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
+//		proceedToBuy.click();
+//	}
+	
 	public void proceedToBuyFromCart() {
-		wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
-		proceedToBuy.click();
+		driver.navigate().refresh();
+	    wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
+	    Actions actions = new Actions(driver);
+	    actions.moveToElement(proceedToBuy).click().perform();
 	}
 	
 	public String getAddress() {
@@ -149,8 +169,4 @@ public class CartPage {
 		return orderPlace.isEnabled();
 	}
 	
-	public static void main(String[] args) {
-		CartPage cp = new CartPage(DriverSetup.getDriver("chrome"));
-		;
-	}
 }

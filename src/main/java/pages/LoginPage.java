@@ -47,9 +47,22 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"auth-error-message-box\"]/div/h4")
     private WebElement errorBox;
     
+    @FindBy(xpath = "//*[@id=\"nav-link-accountList-nav-line-1\"]")
+    private WebElement userNameText;
+    
+    @FindBy(xpath = "//h4[contains(text(), 'Click the button below to continue shopping')]")
+    private WebElement continueShoppingHeader;
+
+    
     //..............................................//
     public void clickSubmitButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+    	try {
+	    	wait.until(ExpectedConditions.visibilityOf(continueShoppingHeader));
+	        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+    	}
+    	catch(Exception e) {
+    		System.out.println("Change in amazon navigation");
+    	}
     }
 
     public void clickLoginButton() {
@@ -82,11 +95,27 @@ public class LoginPage {
     	driver.navigate().to(url);
     }
     
+    public void navigateGetUrl(String url, String browser) {
+    	if(browser.equalsIgnoreCase("chrome")) {
+    		driver.navigate().back();
+    	}
+    	driver.get(url);   
+    }
+    
     public boolean loginButtonDisplayed() {
     	return wait.until(ExpectedConditions.visibilityOf(loginButton)).isDisplayed();
     }
     
     public boolean loginButtonEnabled() {
     	return wait.until(ExpectedConditions.visibilityOf(loginButton)).isEnabled();
+    }
+    
+    public String returnPageUrl() {
+    	return driver.getCurrentUrl();
+    }
+    
+    public String returnUserName() {
+    	WebElement e1 = wait.until(ExpectedConditions.visibilityOf(userNameText));
+    	return e1.getText();
     }
 }
