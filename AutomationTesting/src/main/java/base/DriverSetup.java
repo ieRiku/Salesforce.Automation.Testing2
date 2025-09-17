@@ -22,7 +22,7 @@ public class DriverSetup {
             } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless");
-                options.addArguments("--window-size=1920,1080");
+                options.addArguments("--window-size=1280,720");
                 driver.set(new FirefoxDriver(options));
                 
             } else if (browser.equalsIgnoreCase("edge")) {
