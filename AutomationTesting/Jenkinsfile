@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo "Running Maven Build & Tests"
                 dir('AutomationTesting') {
-                    sh "mvn clean test"
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=testng.xml"
                 }
             }
         }
