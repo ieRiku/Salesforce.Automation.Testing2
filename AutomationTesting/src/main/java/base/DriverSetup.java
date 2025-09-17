@@ -2,17 +2,31 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverSetup {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     
     public static WebDriver getDriver(String browser) {
         if (driver.get() == null) {
-            if (browser.equalsIgnoreCase("chrome")) {
-                driver.set(new ChromeDriver());
+        	if (browser.equalsIgnoreCase("chrome")) {
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
+                driver.set(new ChromeDriver(options));
+                
             } else if (browser.equalsIgnoreCase("firefox")) {
-                driver.set(new FirefoxDriver());
+                FirefoxOptions options = new FirefoxOptions();
+                options.addArguments("--headless");
+                driver.set(new FirefoxDriver(options));
+                
+            } else if (browser.equalsIgnoreCase("edge")) {
+                EdgeOptions options = new EdgeOptions();
+                options.addArguments("--headless");
+                driver.set(new EdgeDriver(options));
             }
             driver.get().manage().window().maximize();
             driver.get().get(ConfigLoader.getProperty("url"));
