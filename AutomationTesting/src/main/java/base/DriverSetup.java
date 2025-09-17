@@ -16,19 +16,16 @@ public class DriverSetup {
         	if (browser.equalsIgnoreCase("chrome")) {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
-                options.addArguments("--window-size=1280,720");
                 driver.set(new ChromeDriver(options));
                 
             } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless");
-                options.addArguments("--window-size=1280,720");
                 driver.set(new FirefoxDriver(options));
                 
             } else if (browser.equalsIgnoreCase("edge")) {
                 EdgeOptions options = new EdgeOptions();
                 options.addArguments("--headless");
-                options.addArguments("--window-size=1920,1080");
                 driver.set(new EdgeDriver(options));
             }
             driver.get().manage().window().maximize();
