@@ -21,6 +21,8 @@ public class DriverSetup {
             } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless");
+                options.addArguments("--width=1920");
+                options.addArguments("--height=1080");
                 driver.set(new FirefoxDriver(options));
                 
             } else if (browser.equalsIgnoreCase("edge")) {
