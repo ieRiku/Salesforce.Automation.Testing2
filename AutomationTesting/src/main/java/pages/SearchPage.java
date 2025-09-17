@@ -51,9 +51,6 @@ public class SearchPage {
     @FindBy(xpath = "\"//div[@data-component-type='s-search-result']\"")
     private WebElement allElementsLocated;
     
-//    @FindBy(xpath = "//*[@id='p_36/dynamic-picker-2']/span/a/span")
-//    private List<WebElement> rangeElement;
-    
     @FindBy(xpath = "//div[@id='priceRefinements']//a[span[starts-with(text(),'₹') and contains(text(),'-')]]")
     private List<WebElement> rangeElement;
     

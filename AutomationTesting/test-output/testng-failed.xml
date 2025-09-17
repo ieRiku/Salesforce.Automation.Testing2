@@ -5,12 +5,12 @@
     <listener class-name="runners.TestListener"/>
   </listeners>
   <test thread-count="2" parallel="tests" name="LoginAndSearchTest_Chrome(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="tests.CartTest">
         <methods>
-          <include name="cartAddTest" invocation-numbers="0"/>
           <include name="quitBrowser"/>
+          <include name="buyProducts"/>
           <include name="setDriver"/>
         </methods>
       </class> <!-- tests.CartTest -->

@@ -26,9 +26,6 @@ public class CartPage {
 	public CartPage() {
 		this.driver = null;
 	}
-
-//	@FindBy(xpath = "//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']")
-//	private WebElement addCartButton;
 	
 	@FindBy(xpath = "//*[@id='a-accordion-auto-6']//*[@id='add-to-cart-button']")
 	private WebElement addCartButton;
@@ -52,17 +49,11 @@ public class CartPage {
 	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-remove'])[1]")
 	private WebElement decreaseProductCount;
 	
-//	@FindBy(xpath = "(//span[@class='a-icon a-icon-small-trash'])[1]")
-//	private WebElement deleteFromCart;
-	
 	@FindBy(xpath = "(//div[@class='a-row sc-list-item sc-java-remote-feature'])[1]/div[4]/div/div[3]/div[1]/span[2]/span")
 	private WebElement deleteFromCart;
 
 	@FindBy(xpath = "//input[@name='proceedToRetailCheckout']")
 	private WebElement proceedToBuy;
-	
-//	@FindBy(xpath = "//span[@id='sc-buy-box-ptc-button-announce']")
-//	private WebElement proceedToBuy;
 	
 	@FindBy(xpath = "//span[@id='deliver-to-address-text']")
 	private WebElement address;
@@ -146,11 +137,6 @@ public class CartPage {
 		decreaseProductCount();
 	}
 	
-	
-//	public void proceedToBuyFromCart() {
-//		wait.until(ExpectedConditions.elementToBeClickable(proceedToBuy));
-//		proceedToBuy.click();
-//	}
 	
 	public void proceedToBuyFromCart() {
 		driver.navigate().refresh();
