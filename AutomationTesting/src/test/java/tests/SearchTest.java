@@ -36,22 +36,17 @@ public class SearchTest {
     
     @Test(groups = {"regression", "search"}, priority = 5)
     public void testApplyFilters() {
-    	try {
-	        // Apply brand filter
-			searchPage.selectBrand("HP");
-	
-	        // Apply price range
-	        searchPage.applyPriceRange();
-	        
-	        // Apply customer ratings.
-	        searchPage.applyCustomerRatings();
-	
-	        // Verify results displayed after applying filters
-	        Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Filtered results not displayed!");
-    	}
-    	catch(Exception e) {
-    		System.out.println("error in applyFilter");
-    	}
+        // Apply brand filter
+		searchPage.selectBrand("HP");
+
+        // Apply price range
+        searchPage.applyPriceRange();
+        
+        // Apply customer ratings.
+        searchPage.applyCustomerRatings();
+
+        // Verify results displayed after applying filters
+        Assert.assertTrue(searchPage.verifyResultsDisplayed(), "Filtered results not displayed!");
     }
 
     @Test(groups = {"regression", "search"}, priority = 6)
