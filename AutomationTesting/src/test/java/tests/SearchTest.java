@@ -40,8 +40,6 @@ public class SearchTest {
 		searchPage.selectBrand("HP");
 
         // Apply price range
-        //Thread.sleep(2000);
-        System.out.println("chk1");
         searchPage.applyPriceRange();
         
         // Apply customer ratings.
