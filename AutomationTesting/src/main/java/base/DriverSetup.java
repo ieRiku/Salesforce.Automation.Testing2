@@ -22,17 +22,14 @@ public class DriverSetup {
             } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless");
-                options.addArguments("--width=1920");
-                options.addArguments("--height=1080");
                 driver.set(new FirefoxDriver(options));
-                driver.get().manage().window().setSize(new Dimension(1920, 1080));
                 
             } else if (browser.equalsIgnoreCase("edge")) {
                 EdgeOptions options = new EdgeOptions();
                 options.addArguments("--headless");
                 driver.set(new EdgeDriver(options));
             }
-            driver.get().manage().window().maximize();
+            driver.get().manage().window().setSize(new Dimension(1920, 1080));
             driver.get().get(ConfigLoader.getProperty("url"));
         }
         return driver.get();
