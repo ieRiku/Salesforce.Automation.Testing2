@@ -1,35 +1,39 @@
 pipeline {
     agent any
- 
+
+    tools {
+        maven 'Maven3'      // Configure Maven in Jenkins Global Tool Configuration
+        jdk 'JDK21'         // Configure JDK 21 in Jenkins Global Tool Configuration
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                echo "Code started in docker"
+                echo "Checking out code from SCM"
                 checkout scm
             }
         }
- 
+
         stage('Build & Test') {
             steps {
-                script {
-                    // Run Maven inside container with Linux-style workspace mapping
-                    docker.image('maven:3.9.6-eclipse-temurin-17').inside('-v %cd%:/workspace -w /workspace') {
-                        sh 'mvn clean test'
-                        echo "Code executed in docker"
-                    }
+                echo "Running Maven Build & Tests"
+                dir('AutomationTesting') {
+                    sh "mvn clean test"
                 }
             }
         }
- 
-        stage('Report') {
+
+        stage('Reports') {
             steps {
-                junit '**/target/surefire-reports/*.xml'
-                publishHTML([allowMissing: false,
+                junit 'AutomationTesting/target/surefire-reports/*.xml'
+                publishHTML([
+                    allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'target',
+                    reportDir: 'AutomationTesting/target',
                     reportFiles: 'ExtentReport.html',
-                    reportName: 'Extent Report'])
+                    reportName: 'Extent Report'
+                ])
             }
         }
     }
