@@ -16,7 +16,7 @@ public class DriverSetup {
         	if (browser.equalsIgnoreCase("chrome")) {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
-                options.addArguments("--window-size=1920,1080");
+                options.addArguments("--window-size=1280,720");
                 driver.set(new ChromeDriver(options));
                 
             } else if (browser.equalsIgnoreCase("firefox")) {
